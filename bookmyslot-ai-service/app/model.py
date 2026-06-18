@@ -7,6 +7,7 @@ logger = logging.getLogger(__name__)
 
 MODEL_PATH = os.getenv("MODEL_PATH", "models/best.pt")
 CONFIDENCE_THRESHOLD = float(os.getenv("CONFIDENCE_THRESHOLD", "0.25"))
+MODEL_DOWNLOAD_URL = os.getenv("MODEL_DOWNLOAD_URL", "")
 
 CLASS_MAPPING = {
     0: "Finding Type 1",
@@ -18,17 +19,41 @@ CLASS_MAPPING = {
 _model = None
 
 
+def _download_model(model_path: Path) -> None:
+    if not MODEL_DOWNLOAD_URL:
+        raise FileNotFoundError(
+            f"Model not found at '{model_path}' and MODEL_DOWNLOAD_URL is not set. "
+            "Either place best.pt in the models/ directory or set MODEL_DOWNLOAD_URL "
+            "to a Google Drive shareable link."
+        )
+
+    logger.info("Model not found locally. Downloading from Google Drive...")
+    model_path.parent.mkdir(parents=True, exist_ok=True)
+
+    try:
+        import gdown
+        gdown.download(MODEL_DOWNLOAD_URL, str(model_path), quiet=False, fuzzy=True)
+    except Exception as exc:
+        raise RuntimeError(f"Failed to download model from Google Drive: {exc}") from exc
+
+    if not model_path.exists():
+        raise RuntimeError(
+            "Download appeared to succeed but model file was not found. "
+            "Check that MODEL_DOWNLOAD_URL is a valid Google Drive link with public access."
+        )
+
+    logger.info("Model downloaded successfully to %s", model_path)
+
+
 def load_model():
     global _model
     if _model is not None:
         return _model
 
     model_path = Path(MODEL_PATH)
+
     if not model_path.exists():
-        raise FileNotFoundError(
-            f"Model not found at {model_path}. "
-            "Place best.pt in the models/ directory or set MODEL_PATH env var."
-        )
+        _download_model(model_path)
 
     from ultralytics import YOLO
 

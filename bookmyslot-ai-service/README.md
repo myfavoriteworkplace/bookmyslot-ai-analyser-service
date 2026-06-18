@@ -57,6 +57,7 @@ Then download from Google Drive to `models/best.pt`.
 |---|---|---|
 | `MODEL_PATH` | `models/best.pt` | Path to the trained YOLOv8 model |
 | `CONFIDENCE_THRESHOLD` | `0.25` | Minimum confidence score for detections |
+| `MODEL_DOWNLOAD_URL` | *(empty)* | Google Drive shareable link — auto-downloads `best.pt` on first start if model is missing |
 | `PORT` | `8000` | Server port (set automatically by Render) |
 
 ## Running Locally
@@ -64,8 +65,17 @@ Then download from Google Drive to `models/best.pt`.
 ```bash
 cd bookmyslot-ai-service
 pip install -r requirements.txt
+
+# Option A: place model manually
+cp /path/to/best.pt models/best.pt
+
+# Option B: auto-download from Google Drive on first start
+export MODEL_DOWNLOAD_URL="https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing"
+
 uvicorn app.main:app --reload --port 8000
 ```
+
+> The service downloads `best.pt` automatically on the **first request** if the model file is missing and `MODEL_DOWNLOAD_URL` is set. Subsequent starts reuse the cached file.
 
 ## API Endpoints
 
@@ -125,7 +135,8 @@ Labels will be updated once DENTEX taxonomy is validated.
 6. Add environment variables:
    - `MODEL_PATH=models/best.pt`
    - `CONFIDENCE_THRESHOLD=0.25`
-7. Upload `best.pt` to Render's persistent disk or download it at startup
+   - `MODEL_DOWNLOAD_URL=https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing`
+7. The service will auto-download `best.pt` from Google Drive on first boot if the file is not already present
 
 ## Node Backend Integration
 

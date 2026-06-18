@@ -7,3 +7,4 @@ python-multipart==0.0.18
 pillow==11.0.0
 opencv-python-headless==4.10.0.84
 pydantic==2.10.3
+gdown==5.2.0

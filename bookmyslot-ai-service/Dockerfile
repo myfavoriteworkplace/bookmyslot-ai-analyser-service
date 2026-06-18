@@ -16,6 +16,7 @@ RUN mkdir -p models uploads
 
 ENV MODEL_PATH=models/best.pt
 ENV CONFIDENCE_THRESHOLD=0.25
+ENV MODEL_DOWNLOAD_URL=""
 
 EXPOSE 8000
 
