@@ -1,0 +1,281 @@
+BookMySlot AI Service — Creation Intent & Implementation Specification
+1. Objective
+Create a separate AI microservice called:
+bookmyslot-ai-service
+Purpose:
+To provide AI-powered dental X-ray analysis capability for the existing BookMySlot healthcare application.
+The service will:
+Receive dental X-ray images
+Run inference using the trained YOLOv8 DENTEX model
+Detect dental findings
+Return structured JSON results
+Be consumed by the existing Node.js backend
+2. Existing Application Context
+Current system:
+Frontend
+Technology:
+React
+Responsibility:
+Doctor dashboard
+Patient management
+X-ray upload UI
+Display AI analysis results
+Backend
+Technology:
+Node.js
+Responsibility:
+Authentication
+Patient data
+Appointment data
+Business rules
+Database
+API gateway
+The Node backend should NOT directly run the AI model.
+3. New Service Responsibility
+Create:
+bookmyslot-ai-service
+Technology:
+Python
+FastAPI
+Ultralytics YOLOv8
+PyTorch
+This service only handles:
+Image
+   |
+   ↓
+YOLO Model
+   |
+   ↓
+Detection Result
+It should NOT handle:
+User authentication
+Patients
+Appointments
+Billing
+Permissions
+Those remain in Node backend.
+4. Final Architecture
+React Application
+
+        |
+        |
+        ↓
+
+Node Backend
+(BookMySlot API)
+
+        |
+        |
+        ↓
+
+bookmyslot-ai-service
+
+        |
+        |
+        ↓
+
+YOLOv8 best.pt
+
+        |
+        |
+        ↓
+
+Detection JSON
+
+        |
+        |
+        ↓
+
+Node Backend
+
+        |
+        |
+        ↓
+
+React Doctor Dashboard
+5. Project Creation
+Create repository:
+bookmyslot-ai-service
+Recommended structure:
+bookmyslot-ai-service/
+
+│
+├── app.py
+│
+├── requirements.txt
+│
+├── models/
+│     |
+│     └── best.pt
+│
+├── uploads/
+│
+├── outputs/
+│
+├── services/
+│     |
+│     └── detector.py
+│
+├── utils/
+│     |
+│     └── class_mapping.py
+│
+└── README.md
+6. Responsibilities of Files
+app.py
+Main FastAPI application.
+Responsibilities:
+API routes
+Request handling
+Response formatting
+services/detector.py
+AI logic.
+Responsibilities:
+Load YOLO model
+Run prediction
+Extract results
+Example:
+image
+ |
+ ↓
+YOLO
+ |
+ ↓
+detections
+utils/class_mapping.py
+Convert YOLO class IDs into meaningful names.
+Example:
+Instead of:
+{
+"class_id":2
+}
+Return:
+{
+"class":"Dental Finding Type 3"
+}
+7. Model Placement
+Copy trained model:
+From Colab:
+/content/dentex_yolo/runs/detect/train/weights/best.pt
+Into:
+models/best.pt
+Final:
+models/
+
+   best.pt
+8. Required Dependencies
+requirements.txt:
+fastapi
+uvicorn
+ultralytics
+torch
+torchvision
+python-multipart
+pillow
+opencv-python-headless
+9. API Design
+Health Check
+Endpoint:
+GET /
+Purpose:
+Check service availability.
+Response:
+{
+"service":"BookMySlot AI",
+"status":"running"
+}
+10. X-Ray Analysis API
+Endpoint:
+POST /analyse-xray
+Request:
+multipart/form-data
+Input:
+file = dental X-ray image
+Processing:
+Receive Image
+
+      ↓
+
+Save temporary file
+
+      ↓
+
+Load YOLO model
+
+      ↓
+
+Run prediction
+
+      ↓
+
+Format response
+
+      ↓
+
+Return JSON
+11. Response Format
+Do NOT return raw YOLO output.
+Bad:
+{
+"class_id":2,
+"confidence":0.91,
+"bbox":[100,200,300,400]
+}
+Return application-friendly format:
+{
+"success":true,
+
+"analysis":{
+
+"findings":[
+
+{
+"name":"Finding Type 3",
+
+"confidence":91,
+
+"location":{
+
+"x":100,
+"y":200,
+"width":300,
+"height":400
+
+}
+
+}
+
+]
+
+}
+
+}
+12. Error Handling
+Handle:
+Invalid image
+Return:
+{
+"success":false,
+"message":"Invalid X-ray image"
+}
+Model unavailable
+Return:
+{
+"success":false,
+"message":"AI service unavailable"
+}
+13. Deployment Requirement
+Target:
+Render Web Service
+Deployment type:
+Python Web Service
+14. Render Configuration
+Build command:
+pip install -r requirements.txt
+Start command:
+uvicorn app:app --host 0.0.0.0 --port $PORT
+15. Environment Variables
+Add:
+MODEL_PATH=models/best.pt
+CONFIDENCE_THRESHOLD=0.25
+Do not hardcode
