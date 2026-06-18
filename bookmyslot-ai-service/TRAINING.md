@@ -1,0 +1,348 @@
+# DENTEX YOLOv8 Training Workflow (Reusable Google Colab Guide)
+
+## Objective
+
+Build a YOLOv8 dental X-ray detection pipeline using the DENTEX dataset.
+
+Final output:
+
+- YOLO trained model: `best.pt`
+- Inference pipeline ready for FastAPI integration
+- Model can be consumed by BookMySlot AI service
+
+---
+
+## 1. Install Dependencies
+
+```python
+!pip install ultralytics datasets huggingface_hub opencv-python pillow matplotlib tqdm
+```
+
+Verify:
+
+```python
+import ultralytics
+print(ultralytics.__version__)
+```
+
+---
+
+## 2. Enable GPU
+
+Colab: **Runtime → Change runtime type → GPU**
+
+Verify:
+
+```python
+!nvidia-smi
+```
+
+Expected: Tesla T4 / CUDA enabled GPU
+
+---
+
+## 3. Authenticate HuggingFace
+
+```python
+from huggingface_hub import login
+
+login("YOUR_HF_TOKEN")
+```
+
+---
+
+## 4. Download DENTEX Dataset
+
+```python
+from huggingface_hub import snapshot_download
+
+dataset_path = snapshot_download(
+    repo_id="ibrahimhamamci/DENTEX",
+    repo_type="dataset"
+)
+
+print(dataset_path)
+```
+
+---
+
+## 5. Extract Dataset
+
+```python
+import zipfile
+
+dataset_root = f"{dataset_path}/DENTEX"
+
+with zipfile.ZipFile(f"{dataset_root}/training_data.zip") as z:
+    z.extractall("/content/dentex_train")
+
+with zipfile.ZipFile(f"{dataset_root}/validation_data.zip") as z:
+    z.extractall("/content/dentex_val")
+```
+
+---
+
+## 6. Load Training Annotations
+
+Use `quadrant-enumeration-disease` because this contains disease annotations.
+
+```python
+from datasets import load_dataset
+
+train_ann = load_dataset(
+    "json",
+    data_files="/content/dentex_train/training_data/quadrant-enumeration-disease/train_quadrant_enumeration_disease.json"
+)
+```
+
+---
+
+## 7. Create YOLO Folder Structure
+
+```python
+import os
+
+folders = [
+    "/content/dentex_yolo/images/train",
+    "/content/dentex_yolo/images/val",
+    "/content/dentex_yolo/labels/train",
+    "/content/dentex_yolo/labels/val"
+]
+
+for folder in folders:
+    os.makedirs(folder, exist_ok=True)
+```
+
+Final structure:
+
+```
+dentex_yolo/
+├── images/
+│   ├── train/
+│   └── val/
+└── labels/
+    ├── train/
+    └── val/
+```
+
+---
+
+## 8. Copy Training Images
+
+```python
+import shutil
+from tqdm import tqdm
+
+image_source = "/content/dentex_train/training_data/quadrant-enumeration-disease/xrays"
+
+for item in tqdm(train_ann["train"]):
+    filename = item["images"][0]["file_name"]
+    shutil.copy(
+        f"{image_source}/{filename}",
+        f"/content/dentex_yolo/images/train/{filename}"
+    )
+```
+
+---
+
+## 9. Convert COCO Bounding Boxes to YOLO Format
+
+YOLO format: `class x_center y_center width height`
+
+Conversion function:
+
+```python
+from PIL import Image
+
+def convert_bbox(bbox, w, h):
+    x, y, bw, bh = bbox
+    return (
+        (x + bw / 2) / w,
+        (y + bh / 2) / h,
+        bw / w,
+        bh / h
+    )
+```
+
+Generate labels:
+
+```python
+for item in train_ann["train"]:
+    image = item["images"][0]
+    filename = image["file_name"]
+
+    img = Image.open(f"/content/dentex_yolo/images/train/{filename}")
+    width, height = img.size
+
+    with open(
+        f"/content/dentex_yolo/labels/train/{filename.replace('.png', '.txt')}",
+        "w"
+    ) as f:
+        for ann in item["annotations"]:
+            cls = ann["category_id_1"]
+            x, y, w, h = convert_bbox(ann["bbox"], width, height)
+            f.write(f"{cls} {x} {y} {w} {h}\n")
+```
+
+---
+
+## 10. Validation Dataset
+
+Load validation JSON:
+
+```python
+val_ds = load_dataset(
+    "json",
+    data_files=f"{dataset_root}/validation_triple.json"
+)
+```
+
+Validation images source:
+
+```
+/content/dentex_val/validation_data/quadrant_enumeration_disease/xrays
+```
+
+Copy images into `dentex_yolo/images/val` and generate validation labels using the same `convert_bbox` function.
+
+---
+
+## 11. Create YOLO YAML
+
+Create `/content/dentex.yaml`:
+
+```yaml
+path: /content/dentex_yolo
+
+train: images/train
+val: images/val
+
+nc: 4
+
+names:
+  0: "1"
+  1: "2"
+  2: "3"
+  3: "4"
+```
+
+> Class names 0–3 correspond to DENTEX `category_id_1` labels. See `app/model.py` for the human-readable mapping used in the API response.
+
+---
+
+## 12. Verify Dataset
+
+```python
+import os
+
+print("Train images:", len(os.listdir("/content/dentex_yolo/images/train")))
+print("Train labels:", len(os.listdir("/content/dentex_yolo/labels/train")))
+print("Val images:",   len(os.listdir("/content/dentex_yolo/images/val")))
+print("Val labels:",   len(os.listdir("/content/dentex_yolo/labels/val")))
+```
+
+---
+
+## 13. Train YOLOv8
+
+```python
+from ultralytics import YOLO
+
+model = YOLO("yolov8s.pt")
+
+model.train(
+    data="/content/dentex.yaml",
+    epochs=50,
+    imgsz=640,
+    batch=16,
+    device=0,
+    cache=True,
+    workers=2
+)
+```
+
+---
+
+## 14. Locate Model
+
+After training:
+
+```
+/content/runs/detect/train/weights/best.pt
+```
+
+Find it:
+
+```python
+!find /content -name "best.pt"
+```
+
+---
+
+## 15. Validate Model
+
+```python
+from ultralytics import YOLO
+
+model = YOLO("/content/runs/detect/train/weights/best.pt")
+metrics = model.val()
+```
+
+---
+
+## 16. Test Prediction
+
+```python
+results = model.predict(
+    source="/content/dentex_yolo/images/val/sample.png",
+    conf=0.25,
+    save=True
+)
+
+results[0].show()
+```
+
+---
+
+## 17. Save Model Permanently
+
+Mount Drive:
+
+```python
+from google.colab import drive
+drive.mount('/content/drive')
+```
+
+Copy to Drive:
+
+```python
+!cp \
+  /content/runs/detect/train/weights/best.pt \
+  /content/drive/MyDrive/bookmyslot-best.pt
+```
+
+Then share the file from Google Drive and set the shareable link as `MODEL_DOWNLOAD_URL` in your Render environment variables. The FastAPI service will download it automatically on first boot.
+
+---
+
+## Current Achievement
+
+| Step | Status |
+|---|---|
+| Dataset download | ✅ |
+| Annotation conversion | ✅ |
+| YOLO structure creation | ✅ |
+| YOLOv8 training | ✅ |
+| Inference testing | ✅ |
+
+## Production Architecture
+
+```
+React App
+    |
+Node Backend
+    |
+FastAPI AI Service  (bookmyslot-ai-service)
+    |
+YOLOv8 best.pt
+```
