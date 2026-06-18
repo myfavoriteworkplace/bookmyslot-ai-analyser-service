@@ -1,0 +1,210 @@
+best.pt model file
+Agent asks:
+Can you upload it here?
+What you should do:
+Do not upload it to your Git repository.
+best.pt is your trained YOLO model. It is the actual AI brain.
+Recommended flow:
+Google Colab
+      |
+      |
+      v
+Google Drive / HuggingFace Model Hub / S3 / Cloudflare R2
+      |
+      |
+      v
+bookmyslot-ai-service (FastAPI)
+      |
+      |
+      v
+Load model into memory
+For now during development:
+Save from Colab:
+from google.colab import drive
+drive.mount('/content/drive')
+
+
+!cp \
+/content/runs/detect/train/weights/best.pt \
+/content/drive/MyDrive/bookmyslot-best.pt
+Then download it locally.
+Your AI service structure:
+bookmyslot-ai-service
+
+app/
+ ├── main.py
+ ├── model.py
+
+models/
+ └── best.pt
+Later for Render:
+Render Service
+        |
+        |
+        v
+Download best.pt during startup
+        |
+        |
+        v
+Load YOLO model
+2. Dental finding class names
+This is important.
+Your agent asked:
+Should I use standard DENTEX 4-class labels?
+Your answer:
+No, don't use generic labels. Use the labels from your trained dataset.
+Because your training used:
+category_id_1
+from:
+quadrant-enumeration-disease
+Your classes are:
+You already saw:
+sample["categories_1"]
+Output:
+[
+{id:0,name:"1"},
+{id:1,name:"2"},
+{id:2,name:"3"},
+{id:3,name:"4"}
+]
+So your YOLO classes are:
+Class 0 -> Tooth category 1
+Class 1 -> Tooth category 2
+Class 2 -> Tooth category 3
+Class 3 -> Tooth category 4
+But this is NOT meaningful for the UI.
+Your API should initially return:
+{
+ "detections":[
+   {
+     "class_id":0,
+     "label":"Finding Type 1",
+     "confidence":0.91,
+     "bbox":[x,y,w,h]
+   }
+ ]
+}
+Later you can map:
+Finding Type 1
+      |
+      |
+      v
+Dental meaning
+after validating the DENTEX taxonomy.
+Do NOT hardcode:
+0 = caries
+1 = lesion
+unless your trained annotation confirms it.
+3. Deployment choice
+Your current stack:
+Frontend
+React
+
+Backend
+Node.js / TypeScript
+
+Hosting
+Render
+My recommendation:
+Choose:
+✅ Build FastAPI service separately and deploy to Render
+Architecture:
+                React App
+                    |
+                    |
+                    |
+              Node Backend
+                    |
+                    |
+             /ai/analyse-xray
+                    |
+                    |
+        bookmyslot-ai-service
+              (FastAPI)
+                    |
+                    |
+                YOLOv8
+                best.pt
+Why:
+Python is natural for ML
+FastAPI is lightweight
+Node stays clean
+Independent scaling
+Easier GPU migration later
+4. Replit vs Render
+Agent asked:
+Build here on Replit or export to Render?
+Choose:
+Render
+Because your existing application is already there.
+Your deployment:
+Render Account
+
+Service 1:
+bookmyslot-frontend
+
+Service 2:
+bookmyslot-backend
+
+Service 3:
+bookmyslot-ai-service   <-- new
+5. About model size
+Agent is correct.
+YOLOv8s:
+Usually:
+best.pt
+~20-50 MB
+YOLOv8m/l:
+100MB+
+For your case:
+Dental X-ray:
+Accuracy matters.
+I would keep:
+YOLOv8s
+for first production version.
+6. Final answer you should give your agent
+Copy this:
+1. I will provide best.pt separately. Do not commit model files into git.
+
+2. Use YOLOv8 inference with dynamic model loading.
+
+3. Use the trained class mapping from my DENTEX category_id_1 labels.
+Do not assume generic dental labels.
+
+Initial response format:
+{
+detections:[
+{
+class_id,
+label,
+confidence,
+bbox
+}
+]
+}
+
+4. Create this as an independent FastAPI service.
+
+Deployment target:
+Render.
+
+Structure it as:
+
+bookmyslot-ai-service/
+
+app/
+ main.py
+ model.py
+ schemas.py
+
+models/
+ best.pt
+
+requirements.txt
+
+Dockerfile
+
+
+The Node backend will call this service.
+
+Do not mix Python service into Node backend
