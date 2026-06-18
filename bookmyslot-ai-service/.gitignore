@@ -1,0 +1,13 @@
+models/*.pt
+models/*.pth
+models/*.onnx
+uploads/
+__pycache__/
+*.pyc
+*.pyo
+.env
+.venv/
+venv/
+dist/
+*.egg-info/
+.DS_Store

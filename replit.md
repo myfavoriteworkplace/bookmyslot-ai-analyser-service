@@ -1,9 +1,19 @@
-# [Project name]
+# BookMySlot AI Service
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Python FastAPI microservice providing AI-powered dental X-ray analysis for the BookMySlot healthcare platform.
 
 ## Run & Operate
 
+### bookmyslot-ai-service (Python / FastAPI)
+```bash
+cd bookmyslot-ai-service
+pip install -r requirements.txt
+uvicorn app.main:app --reload --port 8000
+```
+- Required: place `best.pt` in `bookmyslot-ai-service/models/` (not committed to git)
+- Required env: `MODEL_PATH=models/best.pt`, `CONFIDENCE_THRESHOLD=0.25`
+
+### Node.js workspace (existing pnpm monorepo)
 - `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
@@ -13,6 +23,13 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Stack
 
+### AI Service
+- Python 3.11, FastAPI, Uvicorn
+- YOLOv8 (Ultralytics), PyTorch
+- Pydantic v2
+- Deploy target: Render Web Service
+
+### Node.js Monorepo
 - pnpm workspaces, Node.js 24, TypeScript 5.9
 - API: Express 5
 - DB: PostgreSQL + Drizzle ORM
@@ -22,24 +39,38 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `bookmyslot-ai-service/` — standalone Python AI microservice (independent of pnpm workspace)
+- `bookmyslot-ai-service/app/main.py` — FastAPI routes
+- `bookmyslot-ai-service/app/model.py` — YOLOv8 inference logic + class mapping
+- `bookmyslot-ai-service/app/schemas.py` — Pydantic response models
+- `bookmyslot-ai-service/models/` — model weights directory (`best.pt` not committed)
+- `artifacts/api-server/` — Node.js Express API
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- AI service is **fully independent** of the Node.js backend — Node calls it via HTTP, no shared code
+- `best.pt` model file is **never committed to git** — downloaded from Google Drive/Colab and placed in `models/`
+- Class labels use DENTEX `category_id_1` mapping (0–3 → "Finding Type 1–4") — no assumed dental meanings until taxonomy is validated
+- Confidence threshold is env-configurable (`CONFIDENCE_THRESHOLD`, default 0.25)
+- Temporary upload files are deleted immediately after inference
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+Dental X-ray analysis API: accepts an X-ray image, runs YOLOv8 inference, returns structured JSON findings with class label, confidence score, and bounding box location.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- Do not commit model files (`*.pt`) to git
+- Deploy AI service to Render (separate from Node backend)
+- Use DENTEX category_id_1 class labels — do not hardcode assumed dental meanings
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- `best.pt` must be placed manually in `bookmyslot-ai-service/models/` before the service can run
+- On Render, the model should be downloaded at startup or stored on a persistent disk — not bundled in the Docker image if it exceeds ~50 MB
+- The `bookmyslot-ai-service/` directory is **not** a pnpm workspace package — do not add it to `pnpm-workspace.yaml`
 
 ## Pointers
 
-- See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details
+- See `bookmyslot-ai-service/README.md` for full API docs and Render deployment steps
+- See the `pnpm-workspace` skill for Node.js workspace structure, TypeScript setup, and package details
