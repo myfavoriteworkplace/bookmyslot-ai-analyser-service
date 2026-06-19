@@ -6,16 +6,19 @@ from typing import List
 logger = logging.getLogger(__name__)
 
 MODEL_PATH = os.getenv("MODEL_PATH", "models/best.pt")
-CONFIDENCE_THRESHOLD = float(os.getenv("CONFIDENCE_THRESHOLD", "0.25"))
+CONFIDENCE_THRESHOLD = float(os.getenv("CONFIDENCE_THRESHOLD", "0.50"))
+NMS_IOU_THRESHOLD = float(os.getenv("NMS_IOU_THRESHOLD", "0.40"))
+MAX_DETECTIONS = int(os.getenv("MAX_DETECTIONS", "50"))
 MODEL_DOWNLOAD_URL = os.getenv("MODEL_DOWNLOAD_URL", "")
 
 MIN_MODEL_SIZE_BYTES = 1 * 1024 * 1024
 
+# DENTEX dataset category_id_1 → dental disease name
 CLASS_MAPPING = {
-    0: "Finding Type 1",
-    1: "Finding Type 2",
-    2: "Finding Type 3",
-    3: "Finding Type 4",
+    0: "Caries",
+    1: "Deep Caries",
+    2: "Periapical Lesion",
+    3: "Impacted Tooth",
 }
 
 _model = None
@@ -80,6 +83,8 @@ def run_inference(image_path: str) -> List[dict]:
     results = model.predict(
         source=image_path,
         conf=CONFIDENCE_THRESHOLD,
+        iou=NMS_IOU_THRESHOLD,
+        max_det=MAX_DETECTIONS,
         verbose=False,
     )
 
@@ -98,7 +103,7 @@ def run_inference(image_path: str) -> List[dict]:
             findings.append(
                 {
                     "class_id": class_id,
-                    "label": CLASS_MAPPING.get(class_id, f"Finding Type {class_id + 1}"),
+                    "label": CLASS_MAPPING.get(class_id, f"Unknown ({class_id})"),
                     "confidence": confidence,
                     "location": {
                         "x": round(x, 2),

@@ -183,14 +183,12 @@ All errors return HTTP `200` with `success: false`. Always check the `success` f
 
 ### Class Mapping
 
-| `class_id` | `label` |
-|---|---|
-| `0` | `"Finding Type 1"` |
-| `1` | `"Finding Type 2"` |
-| `2` | `"Finding Type 3"` |
-| `3` | `"Finding Type 4"` |
-
-> Labels will be updated with clinically validated DENTEX taxonomy names once confirmed.
+| `class_id` | `label` | Description |
+|---|---|---|
+| `0` | `"Caries"` | Tooth decay / cavity |
+| `1` | `"Deep Caries"` | Advanced decay reaching the pulp |
+| `2` | `"Periapical Lesion"` | Infection or abscess at the root tip |
+| `3` | `"Impacted Tooth"` | Tooth that has not fully erupted |
 
 ---
 

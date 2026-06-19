@@ -1,0 +1,3308 @@
+{
+    "success": true,
+    "analysis": {
+        "findings": [
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 99.7,
+                "location": {
+                    "x": 1800.4,
+                    "y": 1298.24,
+                    "width": 167.44,
+                    "height": 263.67
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 99.7,
+                "location": {
+                    "x": 1858.05,
+                    "y": 1292.82,
+                    "width": 142.17,
+                    "height": 271.87
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 99.6,
+                "location": {
+                    "x": 1892.75,
+                    "y": 1292.77,
+                    "width": 140.49,
+                    "height": 307.98
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 99.4,
+                "location": {
+                    "x": 1763.46,
+                    "y": 1302.05,
+                    "width": 178.05,
+                    "height": 267.25
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 98.8,
+                "location": {
+                    "x": 1799.89,
+                    "y": 1349.64,
+                    "width": 192.37,
+                    "height": 283.27
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 98.6,
+                "location": {
+                    "x": 1783.18,
+                    "y": 1281.51,
+                    "width": 135.87,
+                    "height": 235.81
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 98.4,
+                "location": {
+                    "x": 1726.75,
+                    "y": 1345.4,
+                    "width": 176.6,
+                    "height": 305.74
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 98.3,
+                "location": {
+                    "x": 1855.77,
+                    "y": 1345.37,
+                    "width": 168.5,
+                    "height": 283.06
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 98.3,
+                "location": {
+                    "x": 1757.57,
+                    "y": 1356.64,
+                    "width": 192.73,
+                    "height": 282.6
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 98.0,
+                "location": {
+                    "x": 1902.92,
+                    "y": 1351.99,
+                    "width": 164.28,
+                    "height": 267.44
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 97.9,
+                "location": {
+                    "x": 1934.64,
+                    "y": 1296.33,
+                    "width": 144.26,
+                    "height": 325.78
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 97.6,
+                "location": {
+                    "x": 2632.82,
+                    "y": 1430.62,
+                    "width": 74.55,
+                    "height": 207.03
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 97.2,
+                "location": {
+                    "x": 1686.76,
+                    "y": 1358.32,
+                    "width": 166.3,
+                    "height": 323.37
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 96.6,
+                "location": {
+                    "x": 2187.1,
+                    "y": 1403.39,
+                    "width": 63.94,
+                    "height": 191.67
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 96.4,
+                "location": {
+                    "x": 2439.87,
+                    "y": 1437.55,
+                    "width": 64.51,
+                    "height": 214.64
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 96.0,
+                "location": {
+                    "x": 2627.24,
+                    "y": 1402.79,
+                    "width": 76.81,
+                    "height": 236.32
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 96.0,
+                "location": {
+                    "x": 2662.96,
+                    "y": 1420.86,
+                    "width": 61.94,
+                    "height": 198.33
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 95.9,
+                "location": {
+                    "x": 1945.27,
+                    "y": 1364.27,
+                    "width": 164.98,
+                    "height": 249.57
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 95.6,
+                "location": {
+                    "x": 2549.65,
+                    "y": 1446.91,
+                    "width": 65.32,
+                    "height": 200.7
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 95.4,
+                "location": {
+                    "x": 2404.88,
+                    "y": 1441.77,
+                    "width": 56.11,
+                    "height": 213.02
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 95.4,
+                "location": {
+                    "x": 2597.0,
+                    "y": 1435.38,
+                    "width": 90.38,
+                    "height": 218.16
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 95.2,
+                "location": {
+                    "x": 2481.03,
+                    "y": 1429.65,
+                    "width": 73.46,
+                    "height": 230.41
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 95.1,
+                "location": {
+                    "x": 2394.72,
+                    "y": 1148.37,
+                    "width": 85.05,
+                    "height": 264.42
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 95.0,
+                "location": {
+                    "x": 2491.29,
+                    "y": 1450.06,
+                    "width": 64.61,
+                    "height": 191.31
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 94.2,
+                "location": {
+                    "x": 2662.43,
+                    "y": 1394.4,
+                    "width": 79.11,
+                    "height": 249.71
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 94.0,
+                "location": {
+                    "x": 1848.7,
+                    "y": 1263.93,
+                    "width": 114.26,
+                    "height": 233.84
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 93.8,
+                "location": {
+                    "x": 1451.14,
+                    "y": 1249.17,
+                    "width": 76.88,
+                    "height": 316.09
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 93.7,
+                "location": {
+                    "x": 2516.99,
+                    "y": 1452.97,
+                    "width": 73.42,
+                    "height": 185.42
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 93.1,
+                "location": {
+                    "x": 2229.15,
+                    "y": 1412.85,
+                    "width": 71.94,
+                    "height": 200.93
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 92.8,
+                "location": {
+                    "x": 1512.17,
+                    "y": 1136.01,
+                    "width": 78.95,
+                    "height": 216.56
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 92.8,
+                "location": {
+                    "x": 2376.03,
+                    "y": 1436.34,
+                    "width": 64.25,
+                    "height": 201.27
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 92.5,
+                "location": {
+                    "x": 1411.68,
+                    "y": 1258.6,
+                    "width": 83.61,
+                    "height": 302.73
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 92.3,
+                "location": {
+                    "x": 1655.89,
+                    "y": 1373.37,
+                    "width": 147.07,
+                    "height": 331.77
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 92.2,
+                "location": {
+                    "x": 2325.49,
+                    "y": 1196.36,
+                    "width": 105.89,
+                    "height": 259.66
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 91.9,
+                "location": {
+                    "x": 1985.54,
+                    "y": 1389.4,
+                    "width": 146.06,
+                    "height": 180.55
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 91.6,
+                "location": {
+                    "x": 1689.63,
+                    "y": 1306.03,
+                    "width": 132.13,
+                    "height": 278.13
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 91.3,
+                "location": {
+                    "x": 1373.03,
+                    "y": 1304.33,
+                    "width": 125.52,
+                    "height": 274.75
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 91.3,
+                "location": {
+                    "x": 2335.96,
+                    "y": 1426.93,
+                    "width": 58.02,
+                    "height": 179.73
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 91.2,
+                "location": {
+                    "x": 1795.74,
+                    "y": 1257.53,
+                    "width": 125.04,
+                    "height": 216.61
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 91.0,
+                "location": {
+                    "x": 1978.73,
+                    "y": 1331.0,
+                    "width": 114.21,
+                    "height": 247.58
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 90.9,
+                "location": {
+                    "x": 2407.2,
+                    "y": 1260.58,
+                    "width": 106.41,
+                    "height": 306.11
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 90.5,
+                "location": {
+                    "x": 2293.32,
+                    "y": 1418.35,
+                    "width": 98.62,
+                    "height": 188.99
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 90.2,
+                "location": {
+                    "x": 2106.29,
+                    "y": 1189.83,
+                    "width": 55.68,
+                    "height": 244.01
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 89.7,
+                "location": {
+                    "x": 2322.62,
+                    "y": 1156.08,
+                    "width": 131.53,
+                    "height": 275.44
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 89.5,
+                "location": {
+                    "x": 2008.65,
+                    "y": 1374.38,
+                    "width": 144.92,
+                    "height": 213.87
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 89.5,
+                "location": {
+                    "x": 2473.6,
+                    "y": 1408.37,
+                    "width": 81.09,
+                    "height": 260.26
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 89.3,
+                "location": {
+                    "x": 2187.51,
+                    "y": 1146.17,
+                    "width": 104.68,
+                    "height": 295.56
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 88.9,
+                "location": {
+                    "x": 1405.15,
+                    "y": 1297.41,
+                    "width": 91.66,
+                    "height": 271.73
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 88.8,
+                "location": {
+                    "x": 2477.9,
+                    "y": 1166.71,
+                    "width": 132.16,
+                    "height": 328.47
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 88.7,
+                "location": {
+                    "x": 2380.19,
+                    "y": 1114.61,
+                    "width": 106.04,
+                    "height": 221.65
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 88.6,
+                "location": {
+                    "x": 2434.67,
+                    "y": 1166.39,
+                    "width": 104.94,
+                    "height": 258.83
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 88.5,
+                "location": {
+                    "x": 2284.64,
+                    "y": 1161.57,
+                    "width": 113.84,
+                    "height": 260.04
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 88.4,
+                "location": {
+                    "x": 1974.21,
+                    "y": 1299.52,
+                    "width": 156.07,
+                    "height": 315.16
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 88.4,
+                "location": {
+                    "x": 2641.21,
+                    "y": 1405.74,
+                    "width": 122.01,
+                    "height": 222.15
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 88.1,
+                "location": {
+                    "x": 2443.68,
+                    "y": 1458.92,
+                    "width": 61.08,
+                    "height": 167.6
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 87.6,
+                "location": {
+                    "x": 2614.67,
+                    "y": 1427.62,
+                    "width": 111.87,
+                    "height": 203.15
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 87.5,
+                "location": {
+                    "x": 2009.96,
+                    "y": 1330.95,
+                    "width": 147.36,
+                    "height": 269.46
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 87.5,
+                "location": {
+                    "x": 2469.39,
+                    "y": 1216.31,
+                    "width": 113.2,
+                    "height": 312.9
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 87.1,
+                "location": {
+                    "x": 2233.13,
+                    "y": 1148.19,
+                    "width": 168.95,
+                    "height": 288.59
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 87.0,
+                "location": {
+                    "x": 2081.65,
+                    "y": 1190.52,
+                    "width": 70.65,
+                    "height": 262.84
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 86.9,
+                "location": {
+                    "x": 2539.98,
+                    "y": 1431.0,
+                    "width": 75.28,
+                    "height": 202.58
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 86.8,
+                "location": {
+                    "x": 1525.52,
+                    "y": 1084.0,
+                    "width": 100.57,
+                    "height": 239.96
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 86.8,
+                "location": {
+                    "x": 1608.67,
+                    "y": 1148.29,
+                    "width": 130.47,
+                    "height": 237.32
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 86.6,
+                "location": {
+                    "x": 2155.26,
+                    "y": 1400.0,
+                    "width": 49.9,
+                    "height": 184.31
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 86.5,
+                "location": {
+                    "x": 2046.04,
+                    "y": 1129.29,
+                    "width": 117.53,
+                    "height": 315.14
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 86.4,
+                "location": {
+                    "x": 1609.22,
+                    "y": 1025.96,
+                    "width": 128.64,
+                    "height": 153.96
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 86.3,
+                "location": {
+                    "x": 2470.78,
+                    "y": 1104.48,
+                    "width": 129.4,
+                    "height": 326.67
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 86.1,
+                "location": {
+                    "x": 2036.04,
+                    "y": 1358.4,
+                    "width": 160.53,
+                    "height": 242.56
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 86.1,
+                "location": {
+                    "x": 2227.77,
+                    "y": 1194.97,
+                    "width": 131.29,
+                    "height": 247.26
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 86.1,
+                "location": {
+                    "x": 1378.39,
+                    "y": 1256.9,
+                    "width": 115.83,
+                    "height": 297.74
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 86.0,
+                "location": {
+                    "x": 2088.19,
+                    "y": 1124.91,
+                    "width": 142.58,
+                    "height": 317.36
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 85.8,
+                "location": {
+                    "x": 2446.33,
+                    "y": 1263.83,
+                    "width": 83.84,
+                    "height": 277.25
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 85.8,
+                "location": {
+                    "x": 2278.39,
+                    "y": 1416.5,
+                    "width": 93.82,
+                    "height": 202.09
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 85.7,
+                "location": {
+                    "x": 2136.42,
+                    "y": 1165.7,
+                    "width": 74.68,
+                    "height": 246.92
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 85.6,
+                "location": {
+                    "x": 1454.18,
+                    "y": 1421.23,
+                    "width": 59.22,
+                    "height": 198.78
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 85.5,
+                "location": {
+                    "x": 2397.92,
+                    "y": 1196.5,
+                    "width": 104.01,
+                    "height": 327.34
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 85.5,
+                "location": {
+                    "x": 2414.5,
+                    "y": 1297.13,
+                    "width": 97.57,
+                    "height": 315.43
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 85.3,
+                "location": {
+                    "x": 1427.63,
+                    "y": 1424.64,
+                    "width": 59.67,
+                    "height": 188.25
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 85.1,
+                "location": {
+                    "x": 2168.0,
+                    "y": 1407.91,
+                    "width": 81.16,
+                    "height": 183.28
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 84.9,
+                "location": {
+                    "x": 2419.54,
+                    "y": 1421.98,
+                    "width": 53.51,
+                    "height": 247.47
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 84.7,
+                "location": {
+                    "x": 2488.61,
+                    "y": 1264.69,
+                    "width": 82.3,
+                    "height": 286.08
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 84.6,
+                "location": {
+                    "x": 2183.86,
+                    "y": 1385.18,
+                    "width": 48.18,
+                    "height": 217.64
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 84.5,
+                "location": {
+                    "x": 1441.83,
+                    "y": 1162.59,
+                    "width": 84.95,
+                    "height": 244.74
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 84.3,
+                "location": {
+                    "x": 2185.51,
+                    "y": 1183.77,
+                    "width": 95.81,
+                    "height": 239.74
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 84.3,
+                "location": {
+                    "x": 1412.87,
+                    "y": 1215.38,
+                    "width": 74.23,
+                    "height": 288.03
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 84.0,
+                "location": {
+                    "x": 2107.79,
+                    "y": 1141.29,
+                    "width": 96.99,
+                    "height": 331.94
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 84.0,
+                "location": {
+                    "x": 1506.88,
+                    "y": 1226.33,
+                    "width": 55.52,
+                    "height": 194.15
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 83.9,
+                "location": {
+                    "x": 2519.58,
+                    "y": 1410.71,
+                    "width": 89.64,
+                    "height": 258.58
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 83.7,
+                "location": {
+                    "x": 2005.42,
+                    "y": 1235.84,
+                    "width": 61.59,
+                    "height": 207.95
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 83.2,
+                "location": {
+                    "x": 1386.53,
+                    "y": 1424.12,
+                    "width": 76.15,
+                    "height": 208.59
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 83.0,
+                "location": {
+                    "x": 2075.19,
+                    "y": 1217.04,
+                    "width": 57.93,
+                    "height": 226.54
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 83.0,
+                "location": {
+                    "x": 2395.06,
+                    "y": 1432.43,
+                    "width": 54.86,
+                    "height": 187.54
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 83.0,
+                "location": {
+                    "x": 2552.43,
+                    "y": 1410.1,
+                    "width": 77.36,
+                    "height": 256.26
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 82.9,
+                "location": {
+                    "x": 1599.63,
+                    "y": 1266.33,
+                    "width": 48.87,
+                    "height": 195.52
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 82.7,
+                "location": {
+                    "x": 1452.01,
+                    "y": 1305.2,
+                    "width": 75.6,
+                    "height": 262.48
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 82.6,
+                "location": {
+                    "x": 1450.37,
+                    "y": 1192.13,
+                    "width": 68.86,
+                    "height": 264.5
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 82.5,
+                "location": {
+                    "x": 2039.72,
+                    "y": 1215.6,
+                    "width": 66.13,
+                    "height": 238.73
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 82.3,
+                "location": {
+                    "x": 2008.73,
+                    "y": 1412.83,
+                    "width": 139.27,
+                    "height": 185.66
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 82.2,
+                "location": {
+                    "x": 1750.81,
+                    "y": 1256.82,
+                    "width": 135.79,
+                    "height": 290.39
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 82.2,
+                "location": {
+                    "x": 1813.56,
+                    "y": 1235.13,
+                    "width": 87.68,
+                    "height": 201.16
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 82.2,
+                "location": {
+                    "x": 2029.91,
+                    "y": 1129.01,
+                    "width": 110.5,
+                    "height": 287.9
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 82.1,
+                "location": {
+                    "x": 1376.93,
+                    "y": 1358.02,
+                    "width": 112.81,
+                    "height": 197.06
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 82.0,
+                "location": {
+                    "x": 1344.36,
+                    "y": 1414.86,
+                    "width": 80.91,
+                    "height": 201.51
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 81.8,
+                "location": {
+                    "x": 2378.23,
+                    "y": 1175.85,
+                    "width": 102.03,
+                    "height": 282.06
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 81.7,
+                "location": {
+                    "x": 1671.86,
+                    "y": 1267.59,
+                    "width": 53.69,
+                    "height": 230.48
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 81.6,
+                "location": {
+                    "x": 2469.39,
+                    "y": 1291.14,
+                    "width": 91.2,
+                    "height": 298.42
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 81.5,
+                "location": {
+                    "x": 1492.93,
+                    "y": 1243.81,
+                    "width": 68.11,
+                    "height": 294.8
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 81.0,
+                "location": {
+                    "x": 2377.03,
+                    "y": 1394.05,
+                    "width": 81.61,
+                    "height": 280.3
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 80.7,
+                "location": {
+                    "x": 2325.43,
+                    "y": 1300.4,
+                    "width": 100.2,
+                    "height": 312.53
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 80.3,
+                "location": {
+                    "x": 2367.99,
+                    "y": 1236.95,
+                    "width": 68.46,
+                    "height": 213.25
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 80.2,
+                "location": {
+                    "x": 2214.73,
+                    "y": 1105.34,
+                    "width": 165.29,
+                    "height": 336.8
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 80.1,
+                "location": {
+                    "x": 1635.47,
+                    "y": 1277.94,
+                    "width": 58.59,
+                    "height": 207.0
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 79.8,
+                "location": {
+                    "x": 1965.45,
+                    "y": 1129.57,
+                    "width": 119.34,
+                    "height": 331.64
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 79.8,
+                "location": {
+                    "x": 1965.81,
+                    "y": 1225.11,
+                    "width": 46.11,
+                    "height": 218.26
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 79.5,
+                "location": {
+                    "x": 2436.24,
+                    "y": 1389.72,
+                    "width": 76.29,
+                    "height": 294.76
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 79.3,
+                "location": {
+                    "x": 2465.72,
+                    "y": 1429.18,
+                    "width": 72.24,
+                    "height": 201.27
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 79.3,
+                "location": {
+                    "x": 2023.3,
+                    "y": 1302.19,
+                    "width": 147.22,
+                    "height": 316.33
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 79.0,
+                "location": {
+                    "x": 2217.23,
+                    "y": 1387.01,
+                    "width": 61.36,
+                    "height": 233.12
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 78.8,
+                "location": {
+                    "x": 2488.49,
+                    "y": 1335.76,
+                    "width": 72.76,
+                    "height": 324.58
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 78.2,
+                "location": {
+                    "x": 1996.42,
+                    "y": 1203.62,
+                    "width": 77.82,
+                    "height": 271.28
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 78.2,
+                "location": {
+                    "x": 2522.02,
+                    "y": 1176.21,
+                    "width": 186.28,
+                    "height": 340.33
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 78.0,
+                "location": {
+                    "x": 2564.93,
+                    "y": 1174.29,
+                    "width": 145.18,
+                    "height": 269.6
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 77.9,
+                "location": {
+                    "x": 2416.51,
+                    "y": 1095.64,
+                    "width": 130.92,
+                    "height": 313.53
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 77.6,
+                "location": {
+                    "x": 2373.52,
+                    "y": 1072.55,
+                    "width": 126.53,
+                    "height": 263.3
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 77.5,
+                "location": {
+                    "x": 1495.69,
+                    "y": 1431.57,
+                    "width": 59.57,
+                    "height": 185.96
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 77.3,
+                "location": {
+                    "x": 1877.92,
+                    "y": 1320.46,
+                    "width": 94.55,
+                    "height": 263.2
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 76.8,
+                "location": {
+                    "x": 1767.94,
+                    "y": 1328.8,
+                    "width": 147.59,
+                    "height": 280.76
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 76.7,
+                "location": {
+                    "x": 1445.76,
+                    "y": 1396.16,
+                    "width": 67.82,
+                    "height": 242.84
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 76.7,
+                "location": {
+                    "x": 2419.82,
+                    "y": 1337.3,
+                    "width": 80.32,
+                    "height": 325.73
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 76.6,
+                "location": {
+                    "x": 1384.96,
+                    "y": 1444.17,
+                    "width": 53.69,
+                    "height": 201.24
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 76.4,
+                "location": {
+                    "x": 2031.55,
+                    "y": 1072.92,
+                    "width": 98.27,
+                    "height": 171.68
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 76.1,
+                "location": {
+                    "x": 1851.65,
+                    "y": 1246.16,
+                    "width": 86.83,
+                    "height": 222.42
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 76.0,
+                "location": {
+                    "x": 1516.81,
+                    "y": 1406.03,
+                    "width": 88.88,
+                    "height": 235.85
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 75.9,
+                "location": {
+                    "x": 2621.41,
+                    "y": 1375.02,
+                    "width": 90.96,
+                    "height": 255.16
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 75.4,
+                "location": {
+                    "x": 1646.52,
+                    "y": 1033.93,
+                    "width": 185.06,
+                    "height": 186.89
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 75.4,
+                "location": {
+                    "x": 2238.08,
+                    "y": 1402.9,
+                    "width": 61.11,
+                    "height": 226.83
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 74.9,
+                "location": {
+                    "x": 1450.86,
+                    "y": 1215.01,
+                    "width": 84.45,
+                    "height": 284.88
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 74.9,
+                "location": {
+                    "x": 1621.4,
+                    "y": 1401.63,
+                    "width": 103.94,
+                    "height": 272.06
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 74.8,
+                "location": {
+                    "x": 2163.38,
+                    "y": 1387.86,
+                    "width": 58.3,
+                    "height": 221.51
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 74.6,
+                "location": {
+                    "x": 1402.12,
+                    "y": 1353.95,
+                    "width": 85.21,
+                    "height": 185.77
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 74.5,
+                "location": {
+                    "x": 2599.51,
+                    "y": 1473.2,
+                    "width": 192.15,
+                    "height": 239.36
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 74.3,
+                "location": {
+                    "x": 2354.02,
+                    "y": 1130.02,
+                    "width": 137.01,
+                    "height": 258.07
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 74.3,
+                "location": {
+                    "x": 2347.33,
+                    "y": 1095.77,
+                    "width": 126.85,
+                    "height": 237.49
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 74.2,
+                "location": {
+                    "x": 2580.25,
+                    "y": 1263.53,
+                    "width": 115.96,
+                    "height": 285.83
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 74.1,
+                "location": {
+                    "x": 1580.84,
+                    "y": 1410.93,
+                    "width": 94.57,
+                    "height": 232.13
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 74.0,
+                "location": {
+                    "x": 2053.39,
+                    "y": 1406.61,
+                    "width": 155.31,
+                    "height": 199.91
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 73.7,
+                "location": {
+                    "x": 1874.58,
+                    "y": 1118.71,
+                    "width": 75.23,
+                    "height": 328.82
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 73.7,
+                "location": {
+                    "x": 1317.57,
+                    "y": 1399.77,
+                    "width": 64.35,
+                    "height": 201.3
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 73.7,
+                "location": {
+                    "x": 2562.49,
+                    "y": 1292.23,
+                    "width": 96.73,
+                    "height": 289.9
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 73.3,
+                "location": {
+                    "x": 2275.49,
+                    "y": 1105.02,
+                    "width": 159.01,
+                    "height": 387.64
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 73.3,
+                "location": {
+                    "x": 2442.37,
+                    "y": 1116.38,
+                    "width": 111.74,
+                    "height": 240.51
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 73.0,
+                "location": {
+                    "x": 2421.1,
+                    "y": 1383.27,
+                    "width": 58.09,
+                    "height": 309.97
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 73.0,
+                "location": {
+                    "x": 2234.63,
+                    "y": 1292.84,
+                    "width": 116.08,
+                    "height": 316.06
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 72.8,
+                "location": {
+                    "x": 2442.59,
+                    "y": 1338.51,
+                    "width": 96.25,
+                    "height": 324.35
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 72.6,
+                "location": {
+                    "x": 2246.85,
+                    "y": 1409.98,
+                    "width": 68.67,
+                    "height": 200.09
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 72.4,
+                "location": {
+                    "x": 2313.28,
+                    "y": 1412.6,
+                    "width": 80.75,
+                    "height": 209.19
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 72.4,
+                "location": {
+                    "x": 1984.35,
+                    "y": 1089.14,
+                    "width": 156.5,
+                    "height": 249.41
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 72.2,
+                "location": {
+                    "x": 2253.69,
+                    "y": 1418.98,
+                    "width": 93.17,
+                    "height": 190.43
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 72.2,
+                "location": {
+                    "x": 1519.73,
+                    "y": 1413.55,
+                    "width": 71.37,
+                    "height": 202.61
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 72.0,
+                "location": {
+                    "x": 1494.24,
+                    "y": 1286.29,
+                    "width": 77.33,
+                    "height": 285.62
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 71.7,
+                "location": {
+                    "x": 1419.22,
+                    "y": 1410.28,
+                    "width": 58.45,
+                    "height": 203.29
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 71.5,
+                "location": {
+                    "x": 2510.09,
+                    "y": 1103.12,
+                    "width": 187.11,
+                    "height": 321.73
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 71.4,
+                "location": {
+                    "x": 1960.61,
+                    "y": 1206.61,
+                    "width": 46.15,
+                    "height": 254.06
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 71.3,
+                "location": {
+                    "x": 2245.35,
+                    "y": 1087.44,
+                    "width": 204.56,
+                    "height": 369.58
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 71.3,
+                "location": {
+                    "x": 1956.5,
+                    "y": 1184.21,
+                    "width": 117.2,
+                    "height": 277.74
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 71.2,
+                "location": {
+                    "x": 1524.08,
+                    "y": 1241.9,
+                    "width": 77.31,
+                    "height": 281.99
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 71.1,
+                "location": {
+                    "x": 2103.45,
+                    "y": 1178.37,
+                    "width": 73.45,
+                    "height": 269.71
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 71.1,
+                "location": {
+                    "x": 1420.18,
+                    "y": 1445.2,
+                    "width": 61.07,
+                    "height": 195.38
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 71.0,
+                "location": {
+                    "x": 2110.26,
+                    "y": 1066.96,
+                    "width": 121.05,
+                    "height": 335.78
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 71.0,
+                "location": {
+                    "x": 2531.56,
+                    "y": 1244.23,
+                    "width": 172.42,
+                    "height": 364.52
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 70.8,
+                "location": {
+                    "x": 2375.26,
+                    "y": 1303.27,
+                    "width": 84.8,
+                    "height": 315.5
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 69.6,
+                "location": {
+                    "x": 1356.28,
+                    "y": 1365.58,
+                    "width": 121.44,
+                    "height": 209.19
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 69.5,
+                "location": {
+                    "x": 2479.15,
+                    "y": 1356.8,
+                    "width": 80.21,
+                    "height": 339.62
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 69.4,
+                "location": {
+                    "x": 1707.3,
+                    "y": 1384.6,
+                    "width": 149.72,
+                    "height": 273.49
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 69.1,
+                "location": {
+                    "x": 2578.54,
+                    "y": 1295.51,
+                    "width": 108.64,
+                    "height": 219.85
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 69.1,
+                "location": {
+                    "x": 1353.81,
+                    "y": 1442.79,
+                    "width": 78.43,
+                    "height": 201.62
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 69.1,
+                "location": {
+                    "x": 2540.28,
+                    "y": 1307.09,
+                    "width": 114.88,
+                    "height": 334.91
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 68.9,
+                "location": {
+                    "x": 2678.79,
+                    "y": 1468.44,
+                    "width": 231.27,
+                    "height": 260.56
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 68.8,
+                "location": {
+                    "x": 1505.22,
+                    "y": 1420.85,
+                    "width": 51.92,
+                    "height": 192.2
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 68.8,
+                "location": {
+                    "x": 1778.91,
+                    "y": 1221.33,
+                    "width": 95.3,
+                    "height": 232.4
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 68.6,
+                "location": {
+                    "x": 1439.37,
+                    "y": 1417.46,
+                    "width": 59.94,
+                    "height": 193.66
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 68.5,
+                "location": {
+                    "x": 1325.56,
+                    "y": 1411.68,
+                    "width": 84.44,
+                    "height": 194.47
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 68.5,
+                "location": {
+                    "x": 1932.8,
+                    "y": 1265.54,
+                    "width": 112.36,
+                    "height": 281.46
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 68.3,
+                "location": {
+                    "x": 2588.95,
+                    "y": 1345.8,
+                    "width": 102.81,
+                    "height": 292.56
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 68.1,
+                "location": {
+                    "x": 1458.3,
+                    "y": 1081.72,
+                    "width": 133.25,
+                    "height": 222.73
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 68.0,
+                "location": {
+                    "x": 1661.39,
+                    "y": 1354.18,
+                    "width": 111.46,
+                    "height": 348.27
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 67.9,
+                "location": {
+                    "x": 2045.29,
+                    "y": 1243.55,
+                    "width": 64.76,
+                    "height": 191.56
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 67.6,
+                "location": {
+                    "x": 2002.33,
+                    "y": 1169.4,
+                    "width": 107.74,
+                    "height": 239.54
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 67.2,
+                "location": {
+                    "x": 1699.88,
+                    "y": 1276.18,
+                    "width": 95.87,
+                    "height": 269.35
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 67.1,
+                "location": {
+                    "x": 1325.02,
+                    "y": 1374.93,
+                    "width": 79.91,
+                    "height": 227.96
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 67.1,
+                "location": {
+                    "x": 1604.09,
+                    "y": 1286.83,
+                    "width": 60.27,
+                    "height": 214.27
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 67.1,
+                "location": {
+                    "x": 1433.09,
+                    "y": 1108.56,
+                    "width": 100.81,
+                    "height": 196.47
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 66.8,
+                "location": {
+                    "x": 1589.94,
+                    "y": 1256.2,
+                    "width": 70.35,
+                    "height": 270.57
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 66.5,
+                "location": {
+                    "x": 2281.8,
+                    "y": 1280.27,
+                    "width": 104.94,
+                    "height": 265.32
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 65.8,
+                "location": {
+                    "x": 1415.72,
+                    "y": 1167.71,
+                    "width": 69.94,
+                    "height": 243.84
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 65.8,
+                "location": {
+                    "x": 2064.79,
+                    "y": 1234.81,
+                    "width": 64.05,
+                    "height": 212.01
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 65.5,
+                "location": {
+                    "x": 1566.72,
+                    "y": 1269.15,
+                    "width": 78.25,
+                    "height": 243.44
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 65.4,
+                "location": {
+                    "x": 1729.66,
+                    "y": 1330.99,
+                    "width": 125.23,
+                    "height": 308.22
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 65.3,
+                "location": {
+                    "x": 2085.21,
+                    "y": 1369.13,
+                    "width": 127.53,
+                    "height": 239.37
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 65.3,
+                "location": {
+                    "x": 2625.58,
+                    "y": 1336.4,
+                    "width": 113.82,
+                    "height": 302.87
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 65.1,
+                "location": {
+                    "x": 2158.6,
+                    "y": 1355.96,
+                    "width": 55.36,
+                    "height": 271.56
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 65.0,
+                "location": {
+                    "x": 2526.26,
+                    "y": 1476.85,
+                    "width": 311.34,
+                    "height": 236.05
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 65.0,
+                "location": {
+                    "x": 2414.32,
+                    "y": 1109.07,
+                    "width": 226.38,
+                    "height": 403.77
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 64.7,
+                "location": {
+                    "x": 2432.44,
+                    "y": 1288.81,
+                    "width": 90.27,
+                    "height": 225.96
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 64.2,
+                "location": {
+                    "x": 1437.85,
+                    "y": 1069.6,
+                    "width": 116.9,
+                    "height": 207.96
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 64.1,
+                "location": {
+                    "x": 2515.87,
+                    "y": 1362.15,
+                    "width": 88.72,
+                    "height": 335.2
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 63.8,
+                "location": {
+                    "x": 2383.41,
+                    "y": 1456.84,
+                    "width": 50.62,
+                    "height": 170.25
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 63.4,
+                "location": {
+                    "x": 1584.33,
+                    "y": 1424.99,
+                    "width": 71.87,
+                    "height": 191.86
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 63.2,
+                "location": {
+                    "x": 1357.01,
+                    "y": 1252.76,
+                    "width": 129.9,
+                    "height": 269.67
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 62.8,
+                "location": {
+                    "x": 1672.52,
+                    "y": 1156.13,
+                    "width": 167.8,
+                    "height": 247.39
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 62.6,
+                "location": {
+                    "x": 2560.85,
+                    "y": 1262.04,
+                    "width": 111.06,
+                    "height": 281.95
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 62.5,
+                "location": {
+                    "x": 2652.58,
+                    "y": 1345.05,
+                    "width": 104.85,
+                    "height": 281.69
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 62.4,
+                "location": {
+                    "x": 1371.08,
+                    "y": 1417.52,
+                    "width": 121.95,
+                    "height": 196.56
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 62.4,
+                "location": {
+                    "x": 1533.5,
+                    "y": 1429.45,
+                    "width": 63.61,
+                    "height": 193.89
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 62.2,
+                "location": {
+                    "x": 2391.91,
+                    "y": 1427.3,
+                    "width": 70.92,
+                    "height": 210.43
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 62.1,
+                "location": {
+                    "x": 1513.77,
+                    "y": 1288.65,
+                    "width": 78.76,
+                    "height": 261.19
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 62.1,
+                "location": {
+                    "x": 2341.58,
+                    "y": 1062.65,
+                    "width": 143.19,
+                    "height": 240.1
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 62.0,
+                "location": {
+                    "x": 2133.26,
+                    "y": 1250.28,
+                    "width": 81.31,
+                    "height": 267.63
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 61.9,
+                "location": {
+                    "x": 2284.31,
+                    "y": 1089.67,
+                    "width": 224.65,
+                    "height": 356.34
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 61.9,
+                "location": {
+                    "x": 1768.01,
+                    "y": 1058.92,
+                    "width": 101.47,
+                    "height": 226.09
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 61.4,
+                "location": {
+                    "x": 2110.86,
+                    "y": 1347.41,
+                    "width": 92.69,
+                    "height": 301.54
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 61.1,
+                "location": {
+                    "x": 2532.19,
+                    "y": 1115.05,
+                    "width": 174.14,
+                    "height": 274.39
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 61.0,
+                "location": {
+                    "x": 1623.42,
+                    "y": 1440.24,
+                    "width": 88.72,
+                    "height": 197.6
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 61.0,
+                "location": {
+                    "x": 2234.65,
+                    "y": 1438.66,
+                    "width": 70.86,
+                    "height": 199.39
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 61.0,
+                "location": {
+                    "x": 1640.3,
+                    "y": 1405.7,
+                    "width": 97.79,
+                    "height": 242.7
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 60.8,
+                "location": {
+                    "x": 2576.41,
+                    "y": 1397.12,
+                    "width": 115.48,
+                    "height": 267.59
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 60.8,
+                "location": {
+                    "x": 1493.11,
+                    "y": 1164.77,
+                    "width": 57.01,
+                    "height": 195.61
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 60.8,
+                "location": {
+                    "x": 1652.67,
+                    "y": 1380.14,
+                    "width": 103.1,
+                    "height": 288.57
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 60.7,
+                "location": {
+                    "x": 1654.18,
+                    "y": 1211.08,
+                    "width": 99.47,
+                    "height": 230.36
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 60.7,
+                "location": {
+                    "x": 2677.37,
+                    "y": 1390.59,
+                    "width": 82.93,
+                    "height": 255.68
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 60.5,
+                "location": {
+                    "x": 1511.87,
+                    "y": 1350.64,
+                    "width": 75.4,
+                    "height": 199.35
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 60.4,
+                "location": {
+                    "x": 1449.73,
+                    "y": 1150.01,
+                    "width": 65.11,
+                    "height": 223.54
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 60.2,
+                "location": {
+                    "x": 2506.65,
+                    "y": 1288.39,
+                    "width": 79.28,
+                    "height": 270.14
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 60.1,
+                "location": {
+                    "x": 2504.14,
+                    "y": 1151.15,
+                    "width": 164.37,
+                    "height": 288.49
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 59.8,
+                "location": {
+                    "x": 2143.71,
+                    "y": 1406.56,
+                    "width": 123.35,
+                    "height": 194.92
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 59.8,
+                "location": {
+                    "x": 2041.46,
+                    "y": 1065.87,
+                    "width": 119.48,
+                    "height": 348.5
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 59.2,
+                "location": {
+                    "x": 1371.34,
+                    "y": 1383.06,
+                    "width": 101.55,
+                    "height": 177.34
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 58.9,
+                "location": {
+                    "x": 1705.92,
+                    "y": 1203.48,
+                    "width": 61.32,
+                    "height": 222.56
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 58.8,
+                "location": {
+                    "x": 2262.79,
+                    "y": 1396.44,
+                    "width": 79.43,
+                    "height": 226.65
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 58.8,
+                "location": {
+                    "x": 2147.72,
+                    "y": 1147.89,
+                    "width": 80.99,
+                    "height": 296.38
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 58.5,
+                "location": {
+                    "x": 1388.68,
+                    "y": 1167.14,
+                    "width": 97.01,
+                    "height": 244.2
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 57.9,
+                "location": {
+                    "x": 2559.54,
+                    "y": 1372.21,
+                    "width": 86.9,
+                    "height": 301.31
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 57.5,
+                "location": {
+                    "x": 1460.18,
+                    "y": 1451.14,
+                    "width": 54.76,
+                    "height": 171.86
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 57.4,
+                "location": {
+                    "x": 2063.74,
+                    "y": 1143.67,
+                    "width": 119.84,
+                    "height": 331.87
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 57.2,
+                "location": {
+                    "x": 1954.71,
+                    "y": 1083.83,
+                    "width": 144.45,
+                    "height": 271.58
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 57.2,
+                "location": {
+                    "x": 2115.29,
+                    "y": 1072.89,
+                    "width": 94.62,
+                    "height": 223.65
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 57.1,
+                "location": {
+                    "x": 1867.07,
+                    "y": 1357.74,
+                    "width": 110.91,
+                    "height": 320.27
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 56.4,
+                "location": {
+                    "x": 1887.78,
+                    "y": 1174.6,
+                    "width": 90.75,
+                    "height": 282.8
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 56.1,
+                "location": {
+                    "x": 2157.59,
+                    "y": 1191.13,
+                    "width": 79.84,
+                    "height": 252.0
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 56.0,
+                "location": {
+                    "x": 1335.44,
+                    "y": 1326.7,
+                    "width": 121.51,
+                    "height": 233.43
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 55.8,
+                "location": {
+                    "x": 2596.38,
+                    "y": 1379.98,
+                    "width": 81.77,
+                    "height": 228.1
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 55.8,
+                "location": {
+                    "x": 1412.47,
+                    "y": 1391.32,
+                    "width": 63.23,
+                    "height": 219.3
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 55.5,
+                "location": {
+                    "x": 14.64,
+                    "y": 1687.38,
+                    "width": 29.28,
+                    "height": 260.24
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 55.4,
+                "location": {
+                    "x": 2399.95,
+                    "y": 1362.36,
+                    "width": 93.67,
+                    "height": 300.51
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 55.3,
+                "location": {
+                    "x": 2468.75,
+                    "y": 1359.51,
+                    "width": 78.55,
+                    "height": 296.19
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 55.1,
+                "location": {
+                    "x": 2610.35,
+                    "y": 1312.52,
+                    "width": 84.02,
+                    "height": 342.72
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 55.0,
+                "location": {
+                    "x": 2038.56,
+                    "y": 1190.58,
+                    "width": 95.84,
+                    "height": 279.89
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 55.0,
+                "location": {
+                    "x": 1625.92,
+                    "y": 1248.96,
+                    "width": 54.34,
+                    "height": 236.97
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 54.9,
+                "location": {
+                    "x": 1451.26,
+                    "y": 1120.25,
+                    "width": 96.79,
+                    "height": 208.62
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 54.8,
+                "location": {
+                    "x": 2125.24,
+                    "y": 1102.25,
+                    "width": 139.85,
+                    "height": 388.09
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 54.8,
+                "location": {
+                    "x": 2505.95,
+                    "y": 1245.29,
+                    "width": 112.58,
+                    "height": 299.43
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 54.7,
+                "location": {
+                    "x": 1694.96,
+                    "y": 1078.54,
+                    "width": 167.93,
+                    "height": 256.14
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 54.6,
+                "location": {
+                    "x": 1897.56,
+                    "y": 1121.02,
+                    "width": 130.52,
+                    "height": 294.7
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 54.1,
+                "location": {
+                    "x": 2093.43,
+                    "y": 1305.19,
+                    "width": 120.13,
+                    "height": 345.0
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 53.9,
+                "location": {
+                    "x": 1498.09,
+                    "y": 1453.12,
+                    "width": 50.36,
+                    "height": 162.12
+                }
+            },
+            {
+                "class_id": 3,
+                "label": "Finding Type 4",
+                "confidence": 53.9,
+                "location": {
+                    "x": 2098.12,
+                    "y": 1402.79,
+                    "width": 160.73,
+                    "height": 208.16
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 53.8,
+                "location": {
+                    "x": 2075.25,
+                    "y": 1065.54,
+                    "width": 161.8,
+                    "height": 250.0
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 53.6,
+                "location": {
+                    "x": 2110.56,
+                    "y": 1137.66,
+                    "width": 74.64,
+                    "height": 318.4
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 53.4,
+                "location": {
+                    "x": 1402.69,
+                    "y": 1154.01,
+                    "width": 112.55,
+                    "height": 253.18
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 53.2,
+                "location": {
+                    "x": 1374.72,
+                    "y": 1196.18,
+                    "width": 131.72,
+                    "height": 274.23
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 52.9,
+                "location": {
+                    "x": 1778.07,
+                    "y": 1103.63,
+                    "width": 119.89,
+                    "height": 310.84
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 52.8,
+                "location": {
+                    "x": 2208.41,
+                    "y": 1172.58,
+                    "width": 130.83,
+                    "height": 249.61
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 52.7,
+                "location": {
+                    "x": 2107.17,
+                    "y": 1267.8,
+                    "width": 66.35,
+                    "height": 270.23
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 52.6,
+                "location": {
+                    "x": 1377.69,
+                    "y": 1378.42,
+                    "width": 55.88,
+                    "height": 193.15
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 52.6,
+                "location": {
+                    "x": 147.68,
+                    "y": 906.32,
+                    "width": 171.5,
+                    "height": 363.98
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 52.2,
+                "location": {
+                    "x": 2343.68,
+                    "y": 1165.07,
+                    "width": 137.43,
+                    "height": 280.6
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 51.9,
+                "location": {
+                    "x": 138.92,
+                    "y": 963.57,
+                    "width": 151.75,
+                    "height": 298.95
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 51.8,
+                "location": {
+                    "x": 2031.72,
+                    "y": 1043.01,
+                    "width": 109.02,
+                    "height": 219.66
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 51.8,
+                "location": {
+                    "x": 2154.53,
+                    "y": 1243.29,
+                    "width": 73.13,
+                    "height": 253.91
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 51.5,
+                "location": {
+                    "x": 1644.13,
+                    "y": 947.3,
+                    "width": 197.82,
+                    "height": 277.77
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 51.4,
+                "location": {
+                    "x": 2327.03,
+                    "y": 1355.34,
+                    "width": 93.77,
+                    "height": 312.74
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 51.3,
+                "location": {
+                    "x": 2190.41,
+                    "y": 1440.6,
+                    "width": 67.58,
+                    "height": 202.71
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 51.3,
+                "location": {
+                    "x": 2073.98,
+                    "y": 1016.42,
+                    "width": 156.05,
+                    "height": 269.51
+                }
+            },
+            {
+                "class_id": 0,
+                "label": "Finding Type 1",
+                "confidence": 50.9,
+                "location": {
+                    "x": 1557.56,
+                    "y": 1064.0,
+                    "width": 131.27,
+                    "height": 272.11
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 50.8,
+                "location": {
+                    "x": 2496.61,
+                    "y": 1065.1,
+                    "width": 167.85,
+                    "height": 272.02
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 50.7,
+                "location": {
+                    "x": 1707.91,
+                    "y": 1239.21,
+                    "width": 59.41,
+                    "height": 242.95
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 50.7,
+                "location": {
+                    "x": 1524.68,
+                    "y": 1129.91,
+                    "width": 77.59,
+                    "height": 209.44
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 50.5,
+                "location": {
+                    "x": 1451.78,
+                    "y": 1359.89,
+                    "width": 69.43,
+                    "height": 195.17
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 50.0,
+                "location": {
+                    "x": 1371.46,
+                    "y": 1265.7,
+                    "width": 111.0,
+                    "height": 281.52
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 49.9,
+                "location": {
+                    "x": 142.67,
+                    "y": 1842.65,
+                    "width": 169.01,
+                    "height": 110.7
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 49.8,
+                "location": {
+                    "x": 2105.91,
+                    "y": 1214.65,
+                    "width": 66.27,
+                    "height": 228.02
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 49.3,
+                "location": {
+                    "x": 2536.75,
+                    "y": 1191.19,
+                    "width": 154.25,
+                    "height": 254.13
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 49.2,
+                "location": {
+                    "x": 2623.33,
+                    "y": 1291.96,
+                    "width": 125.78,
+                    "height": 299.77
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 49.2,
+                "location": {
+                    "x": 1564.39,
+                    "y": 1156.95,
+                    "width": 85.12,
+                    "height": 225.17
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 48.9,
+                "location": {
+                    "x": 2233.81,
+                    "y": 1365.85,
+                    "width": 69.94,
+                    "height": 261.6
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 48.9,
+                "location": {
+                    "x": 2318.72,
+                    "y": 1358.19,
+                    "width": 94.13,
+                    "height": 289.44
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 48.9,
+                "location": {
+                    "x": 1585.66,
+                    "y": 1301.55,
+                    "width": 53.03,
+                    "height": 248.35
+                }
+            },
+            {
+                "class_id": 1,
+                "label": "Finding Type 2",
+                "confidence": 48.5,
+                "location": {
+                    "x": 2578.64,
+                    "y": 1249.69,
+                    "width": 118.6,
+                    "height": 324.99
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 48.4,
+                "location": {
+                    "x": 103.67,
+                    "y": 968.31,
+                    "width": 175.63,
+                    "height": 290.84
+                }
+            },
+            {
+                "class_id": 2,
+                "label": "Finding Type 3",
+                "confidence": 47.9,
+                "location": {
+                    "x": 102.58,
+                    "y": 911.66,
+                    "width": 177.17,
+                    "height": 352.07
+                }
+            }
+        ]
+    },
+    "message": null
+}
