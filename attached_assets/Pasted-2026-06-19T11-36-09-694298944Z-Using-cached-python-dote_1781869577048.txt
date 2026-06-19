@@ -1,0 +1,150 @@
+2026-06-19T11:36:09.694298944Z   Using cached python_dotenv-1.2.2-py3-none-any.whl (22 kB)
+2026-06-19T11:36:09.895581492Z Collecting pyyaml>=5.1
+2026-06-19T11:36:09.904571285Z   Using cached pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+2026-06-19T11:36:10.116553301Z Collecting uvloop!=0.15.0,!=0.15.1,>=0.14.0
+2026-06-19T11:36:10.157623637Z   Using cached uvloop-0.22.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.8 MB)
+2026-06-19T11:36:10.574041914Z Collecting watchfiles>=0.13
+2026-06-19T11:36:10.586453577Z   Using cached watchfiles-1.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (456 kB)
+2026-06-19T11:36:10.8867248Z Collecting websockets>=10.4
+2026-06-19T11:36:10.91620358Z   Using cached websockets-16.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (184 kB)
+2026-06-19T11:36:11.589274653Z Collecting numpy>=1.23.0
+2026-06-19T11:36:11.667892383Z   Using cached numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+2026-06-19T11:36:12.465778957Z Collecting matplotlib>=3.3.0
+2026-06-19T11:36:12.491192754Z   Using cached matplotlib-3.11.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.0 MB)
+2026-06-19T11:36:12.899057108Z Collecting opencv-python>=4.6.0
+2026-06-19T11:36:13.147468395Z   Using cached opencv_python-4.13.0.92-cp37-abi3-manylinux_2_28_x86_64.whl (72.9 MB)
+2026-06-19T11:36:13.492518739Z Collecting requests>=2.23.0
+2026-06-19T11:36:13.502339819Z   Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+2026-06-19T11:36:13.78137374Z Collecting scipy>=1.4.1
+2026-06-19T11:36:14.002937801Z   Using cached scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+2026-06-19T11:36:14.493431596Z Collecting tqdm>=4.64.0
+2026-06-19T11:36:14.587618314Z   Using cached tqdm-4.68.3-py3-none-any.whl (78 kB)
+2026-06-19T11:36:14.902177898Z Collecting psutil
+2026-06-19T11:36:14.903948884Z   Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+2026-06-19T11:36:14.928604146Z Collecting py-cpuinfo
+2026-06-19T11:36:14.93026834Z   Using cached py_cpuinfo-9.0.0-py3-none-any.whl (22 kB)
+2026-06-19T11:36:15.228768937Z Collecting pandas>=1.1.4
+2026-06-19T11:36:15.264633637Z   Using cached pandas-3.0.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (11.3 MB)
+2026-06-19T11:36:15.358019128Z Collecting seaborn>=0.11.0
+2026-06-19T11:36:15.360182062Z   Using cached seaborn-0.13.2-py3-none-any.whl (294 kB)
+2026-06-19T11:36:15.408500966Z Collecting ultralytics-thop>=2.0.0
+2026-06-19T11:36:15.410853674Z   Using cached ultralytics_thop-2.0.20-py3-none-any.whl (28 kB)
+2026-06-19T11:36:15.559927759Z Collecting filelock
+2026-06-19T11:36:15.561485691Z   Using cached filelock-3.29.4-py3-none-any.whl (42 kB)
+2026-06-19T11:36:15.602477245Z Collecting networkx
+2026-06-19T11:36:15.609310584Z   Using cached networkx-3.6.1-py3-none-any.whl (2.1 MB)
+2026-06-19T11:36:15.647347139Z Collecting jinja2
+2026-06-19T11:36:15.649081304Z   Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-06-19T11:36:15.696195773Z Collecting fsspec
+2026-06-19T11:36:15.698033071Z   Using cached fsspec-2026.6.0-py3-none-any.whl (203 kB)
+2026-06-19T11:36:15.730173095Z Collecting nvidia-cuda-nvrtc-cu12==12.4.127
+2026-06-19T11:36:15.814294657Z   Using cached nvidia_cuda_nvrtc_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (24.6 MB)
+2026-06-19T11:36:15.906396492Z Collecting nvidia-cuda-runtime-cu12==12.4.127
+2026-06-19T11:36:15.908508185Z   Using cached nvidia_cuda_runtime_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (883 kB)
+2026-06-19T11:36:15.939330003Z Collecting nvidia-cuda-cupti-cu12==12.4.127
+2026-06-19T11:36:15.974613361Z   Using cached nvidia_cuda_cupti_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (13.8 MB)
+2026-06-19T11:36:16.04875044Z Collecting nvidia-cudnn-cu12==9.1.0.70
+2026-06-19T11:36:18.406212485Z   Using cached nvidia_cudnn_cu12-9.1.0.70-py3-none-manylinux2014_x86_64.whl (664.8 MB)
+2026-06-19T11:36:19.881926808Z Collecting nvidia-cublas-cu12==12.4.5.8
+2026-06-19T11:36:21.134494568Z   Using cached nvidia_cublas_cu12-12.4.5.8-py3-none-manylinux2014_x86_64.whl (363.4 MB)
+2026-06-19T11:36:21.925257627Z Collecting nvidia-cufft-cu12==11.2.1.3
+2026-06-19T11:36:22.68333281Z   Using cached nvidia_cufft_cu12-11.2.1.3-py3-none-manylinux2014_x86_64.whl (211.5 MB)
+2026-06-19T11:36:23.419925856Z Collecting nvidia-curand-cu12==10.3.5.147
+2026-06-19T11:36:23.608323791Z   Using cached nvidia_curand_cu12-10.3.5.147-py3-none-manylinux2014_x86_64.whl (56.3 MB)
+2026-06-19T11:36:23.951327604Z Collecting nvidia-cusolver-cu12==11.6.1.9
+2026-06-19T11:36:24.452558739Z   Using cached nvidia_cusolver_cu12-11.6.1.9-py3-none-manylinux2014_x86_64.whl (127.9 MB)
+2026-06-19T11:36:25.008782052Z Collecting nvidia-cusparse-cu12==12.3.1.170
+2026-06-19T11:36:25.726598076Z   Using cached nvidia_cusparse_cu12-12.3.1.170-py3-none-manylinux2014_x86_64.whl (207.5 MB)
+2026-06-19T11:36:26.458556998Z Collecting nvidia-nccl-cu12==2.21.5
+2026-06-19T11:36:27.10113833Z   Using cached nvidia_nccl_cu12-2.21.5-py3-none-manylinux2014_x86_64.whl (188.7 MB)
+2026-06-19T11:36:27.932028716Z Collecting nvidia-nvtx-cu12==12.4.127
+2026-06-19T11:36:27.933783532Z   Using cached nvidia_nvtx_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (99 kB)
+2026-06-19T11:36:28.034367319Z Collecting nvidia-nvjitlink-cu12==12.4.127
+2026-06-19T11:36:28.08993389Z   Using cached nvidia_nvjitlink_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (21.1 MB)
+2026-06-19T11:36:28.412980487Z Collecting triton==3.1.0
+2026-06-19T11:36:29.135540058Z   Using cached triton-3.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (209.5 MB)
+2026-06-19T11:36:29.894990449Z Collecting sympy==1.13.1
+2026-06-19T11:36:29.915515257Z   Using cached sympy-1.13.1-py3-none-any.whl (6.2 MB)
+2026-06-19T11:36:30.304822442Z Collecting annotated-types>=0.6.0
+2026-06-19T11:36:30.306576088Z   Using cached annotated_types-0.7.0-py3-none-any.whl (13 kB)
+2026-06-19T11:36:32.087663488Z Collecting pydantic-core==2.27.1
+2026-06-19T11:36:32.117528227Z   Using cached pydantic_core-2.27.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+2026-06-19T11:36:32.345502868Z Collecting beautifulsoup4
+2026-06-19T11:36:32.347153002Z   Using cached beautifulsoup4-4.15.0-py3-none-any.whl (109 kB)
+2026-06-19T11:36:32.667231138Z Collecting mpmath<1.4,>=1.1.0
+2026-06-19T11:36:32.708270974Z   Using cached mpmath-1.3.0-py3-none-any.whl (536 kB)
+2026-06-19T11:36:33.254074825Z Collecting contourpy>=1.0.1
+2026-06-19T11:36:33.255922373Z   Using cached contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+2026-06-19T11:36:33.463366986Z Collecting cycler>=0.10
+2026-06-19T11:36:33.464886817Z   Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+2026-06-19T11:36:33.973634834Z Collecting fonttools>=4.22.0
+2026-06-19T11:36:33.977720767Z   Using cached fonttools-4.63.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.1 MB)
+2026-06-19T11:36:34.373531246Z Collecting kiwisolver>=1.3.1
+2026-06-19T11:36:34.376172579Z   Using cached kiwisolver-1.5.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+2026-06-19T11:36:34.674111655Z Collecting packaging>=20.0
+2026-06-19T11:36:34.675661457Z   Using cached packaging-26.2-py3-none-any.whl (100 kB)
+2026-06-19T11:36:35.086594123Z Collecting pyparsing>=3
+2026-06-19T11:36:35.088390549Z   Using cached pyparsing-3.3.2-py3-none-any.whl (122 kB)
+2026-06-19T11:36:35.379953955Z Collecting python-dateutil>=2.7
+2026-06-19T11:36:35.38166045Z   Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-06-19T11:36:35.974944029Z Collecting charset_normalizer<4,>=2
+2026-06-19T11:36:35.976727695Z   Using cached charset_normalizer-3.4.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (214 kB)
+2026-06-19T11:36:36.280365217Z Collecting idna<4,>=2.5
+2026-06-19T11:36:36.28197007Z   Using cached idna-3.18-py3-none-any.whl (65 kB)
+2026-06-19T11:36:36.542525905Z Collecting urllib3<3,>=1.26
+2026-06-19T11:36:36.544211829Z   Using cached urllib3-2.7.0-py3-none-any.whl (131 kB)
+2026-06-19T11:36:36.843981662Z Collecting certifi>=2023.5.7
+2026-06-19T11:36:36.84585281Z   Using cached certifi-2026.6.17-py3-none-any.whl (133 kB)
+2026-06-19T11:36:37.249926566Z Collecting anyio<5,>=3.4.0
+2026-06-19T11:36:37.251471178Z   Using cached anyio-4.14.0-py3-none-any.whl (123 kB)
+2026-06-19T11:36:37.556449077Z Collecting soupsieve>=1.6.1
+2026-06-19T11:36:37.558158112Z   Using cached soupsieve-2.8.4-py3-none-any.whl (37 kB)
+2026-06-19T11:36:37.869643533Z Collecting MarkupSafe>=2.0
+2026-06-19T11:36:37.894266375Z   Using cached markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2026-06-19T11:36:38.178039882Z Collecting PySocks!=1.5.7,>=1.5.6
+2026-06-19T11:36:38.179681995Z   Using cached PySocks-1.7.1-py3-none-any.whl (16 kB)
+2026-06-19T11:36:38.564150653Z Collecting six>=1.5
+2026-06-19T11:36:38.565794476Z   Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-06-19T11:36:39.310678431Z Installing collected packages: py-cpuinfo, mpmath, websockets, uvloop, urllib3, typing-extensions, tqdm, sympy, soupsieve, six, pyyaml, python-multipart, python-dotenv, PySocks, pyparsing, psutil, pillow, packaging, nvidia-nvtx-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufft-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, numpy, networkx, MarkupSafe, kiwisolver, idna, httptools, h11, fsspec, fonttools, filelock, cycler, click, charset_normalizer, certifi, annotated-types, uvicorn, triton, scipy, requests, python-dateutil, pydantic-core, opencv-python-headless, opencv-python, nvidia-cusparse-cu12, nvidia-cudnn-cu12, jinja2, contourpy, beautifulsoup4, anyio, watchfiles, starlette, pydantic, pandas, nvidia-cusolver-cu12, matplotlib, torch, seaborn, gdown, fastapi, ultralytics-thop, torchvision, ultralytics
+2026-06-19T11:37:54.87451851Z Successfully installed MarkupSafe-3.0.3 PySocks-1.7.1 annotated-types-0.7.0 anyio-4.14.0 beautifulsoup4-4.15.0 certifi-2026.6.17 charset_normalizer-3.4.7 click-8.4.1 contourpy-1.3.3 cycler-0.12.1 fastapi-0.115.5 filelock-3.29.4 fonttools-4.63.0 fsspec-2026.6.0 gdown-5.2.0 h11-0.16.0 httptools-0.8.0 idna-3.18 jinja2-3.1.6 kiwisolver-1.5.0 matplotlib-3.11.0 mpmath-1.3.0 networkx-3.6.1 numpy-2.4.6 nvidia-cublas-cu12-12.4.5.8 nvidia-cuda-cupti-cu12-12.4.127 nvidia-cuda-nvrtc-cu12-12.4.127 nvidia-cuda-runtime-cu12-12.4.127 nvidia-cudnn-cu12-9.1.0.70 nvidia-cufft-cu12-11.2.1.3 nvidia-curand-cu12-10.3.5.147 nvidia-cusolver-cu12-11.6.1.9 nvidia-cusparse-cu12-12.3.1.170 nvidia-nccl-cu12-2.21.5 nvidia-nvjitlink-cu12-12.4.127 nvidia-nvtx-cu12-12.4.127 opencv-python-4.13.0.92 opencv-python-headless-4.10.0.84 packaging-26.2 pandas-3.0.3 pillow-11.0.0 psutil-7.2.2 py-cpuinfo-9.0.0 pydantic-2.10.3 pydantic-core-2.27.1 pyparsing-3.3.2 python-dateutil-2.9.0.post0 python-dotenv-1.2.2 python-multipart-0.0.20 pyyaml-6.0.3 requests-2.34.2 scipy-1.17.1 seaborn-0.13.2 six-1.17.0 soupsieve-2.8.4 starlette-0.41.3 sympy-1.13.1 torch-2.5.1 torchvision-0.20.1 tqdm-4.68.3 triton-3.1.0 typing-extensions-4.15.0 ultralytics-8.3.55 ultralytics-thop-2.0.20 urllib3-2.7.0 uvicorn-0.32.1 uvloop-0.22.1 watchfiles-1.2.0 websockets-16.0
+2026-06-19T11:37:54.927036729Z 
+2026-06-19T11:37:54.927049669Z [notice] A new release of pip available: 22.3 -> 26.1.2
+2026-06-19T11:37:54.9270526Z [notice] To update, run: pip install --upgrade pip
+2026-06-19T11:37:57.616796063Z ==> Uploading build...
+2026-06-19T11:39:48.88540052Z ==> Uploaded in 69.7s. Compression took 41.6s
+2026-06-19T11:39:49.732320146Z ==> Build successful 🎉
+2026-06-19T11:39:52.710274288Z ==> Deploying...
+2026-06-19T11:39:52.756529643Z ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2026-06-19T11:41:55.851703264Z ==> No open ports detected, continuing to scan...
+2026-06-19T11:41:55.988055158Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-06-19T11:42:09.384234237Z ==> Running 'uvicorn app.main:app --host 0.0.0.0 --port $PORT'
+2026-06-19T11:42:24.38971943Z INFO:     Started server process [60]
+2026-06-19T11:42:24.389747951Z INFO:     Waiting for application startup.
+2026-06-19T11:42:24.389990106Z INFO:app.main:Pre-loading YOLO model at startup...
+2026-06-19T11:42:24.390069197Z INFO:app.model:Model not found locally. Downloading from Google Drive...
+2026-06-19T11:42:30.57757336Z Downloading...
+2026-06-19T11:42:30.577592921Z From: https://drive.google.com/uc?id=1VJTHvB99crBmUiw6eMZ6vSIVJID_eW5o
+2026-06-19T11:42:30.577599311Z To: /opt/render/project/src/bookmyslot-ai-service/models/best.pt
+2026-06-19T11:42:30.984299726Z   0%|          | 0.00/22.5M [00:00<?, ?B/s] 16%|█▋        | 3.67M/22.5M [00:00<00:00, 36.5MB/s] 47%|████▋     | 10.5M/22.5M [00:00<00:00, 54.8MB/s] 77%|███████▋  | 17.3M/22.5M [00:00<00:00, 60.7MB/s]100%|██████████| 22.5M/22.5M [00:00<00:00, 56.2MB/s]
+2026-06-19T11:42:30.98687817Z INFO:app.model:Model downloaded successfully (21.5 MB)
+2026-06-19T11:42:56.583799883Z WARNING:matplotlib.font_manager:Matplotlib is building the font cache; this may take a moment.
+2026-06-19T11:42:56.630480208Z ==> No open ports detected, continuing to scan...
+2026-06-19T11:42:56.719004189Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-06-19T11:42:57.688571367Z INFO:matplotlib.font_manager:generated new fontManager
+2026-06-19T11:43:01.598599119Z Creating new Ultralytics Settings v0.0.6 file ✅ 
+2026-06-19T11:43:01.59862534Z View Ultralytics Settings with 'yolo settings' or at '/opt/render/.config/Ultralytics/settings.json'
+2026-06-19T11:43:01.5986323Z Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+2026-06-19T11:43:20.982876931Z INFO:app.model:Loading YOLO model from models/best.pt
+2026-06-19T11:43:21.797295122Z INFO:app.model:Model loaded successfully
+2026-06-19T11:43:21.797319503Z INFO:app.main:Model ready.
+2026-06-19T11:43:21.904141176Z INFO:     Application startup complete.
+2026-06-19T11:43:21.969975617Z INFO:     Uvicorn running on http://0.0.0.0:10000 (Press CTRL+C to quit)
+2026-06-19T11:43:22.513595311Z INFO:     127.0.0.1:39442 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+2026-06-19T11:43:24.082862781Z ==> Your service is live 🎉
+2026-06-19T11:43:24.157621722Z ==> 
+2026-06-19T11:43:24.159911007Z ==> ///////////////////////////////////////////////////////////
+2026-06-19T11:43:24.161861786Z ==> 
+2026-06-19T11:43:24.164521119Z ==> Available at your primary URL https://bookmyslot-ai-analyser-service.onrender.com
+2026-06-19T11:43:24.168085329Z ==> 
+2026-06-19T11:43:24.169944166Z ==> ///////////////////////////////////////////////////////////
+2026-06-19T11:43:24.429312175Z INFO:     35.247.25.191:0 - "GET / HTTP/1.1" 200 OK
