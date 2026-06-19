@@ -1,0 +1,100 @@
+2026-06-19T11:59:54.63433504Z   Using cached opencv_python-4.13.0.92-cp37-abi3-manylinux_2_28_x86_64.whl (72.9 MB)
+2026-06-19T11:59:55.324430542Z Collecting scipy>=1.4.1
+2026-06-19T11:59:55.444529854Z   Using cached scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+2026-06-19T11:59:55.866772321Z Collecting psutil
+2026-06-19T11:59:55.868517015Z   Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+2026-06-19T11:59:56.266483864Z Collecting py-cpuinfo
+2026-06-19T11:59:56.268060112Z   Using cached py_cpuinfo-9.0.0-py3-none-any.whl (22 kB)
+2026-06-19T11:59:57.077591326Z Collecting pandas>=1.1.4
+2026-06-19T11:59:57.107737292Z   Using cached pandas-3.0.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (11.3 MB)
+2026-06-19T11:59:57.726742243Z Collecting seaborn>=0.11.0
+2026-06-19T11:59:57.729432234Z   Using cached seaborn-0.13.2-py3-none-any.whl (294 kB)
+2026-06-19T11:59:58.181431117Z Collecting ultralytics-thop>=2.0.0
+2026-06-19T11:59:58.182974074Z   Using cached ultralytics_thop-2.0.20-py3-none-any.whl (28 kB)
+2026-06-19T11:59:58.588362259Z Collecting mpmath<1.4,>=1.1.0
+2026-06-19T11:59:58.588519704Z   Obtaining dependency information for mpmath<1.4,>=1.1.0 from https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl.metadata
+2026-06-19T11:59:58.598999083Z   Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+2026-06-19T11:59:59.292065505Z Collecting contourpy>=1.0.1
+2026-06-19T11:59:59.293735456Z   Using cached contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+2026-06-19T11:59:59.469765388Z Collecting cycler>=0.10
+2026-06-19T11:59:59.471287464Z   Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+2026-06-19T12:00:00.107118616Z Collecting fonttools>=4.22.0
+2026-06-19T12:00:00.120927496Z   Using cached fonttools-4.63.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.1 MB)
+2026-06-19T12:00:00.42956533Z Collecting kiwisolver>=1.3.1
+2026-06-19T12:00:00.431828969Z   Using cached kiwisolver-1.5.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+2026-06-19T12:00:00.861835623Z Collecting packaging>=20.0
+2026-06-19T12:00:00.864087071Z   Using cached packaging-26.2-py3-none-any.whl (100 kB)
+2026-06-19T12:00:01.313779164Z Collecting pyparsing>=3
+2026-06-19T12:00:01.315472005Z   Using cached pyparsing-3.3.2-py3-none-any.whl (122 kB)
+2026-06-19T12:00:01.625609885Z Collecting python-dateutil>=2.7
+2026-06-19T12:00:01.627494742Z   Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-06-19T12:00:02.176409032Z Collecting charset_normalizer<4,>=2
+2026-06-19T12:00:02.178191386Z   Using cached charset_normalizer-3.4.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (214 kB)
+2026-06-19T12:00:02.547104733Z Collecting idna<4,>=2.5
+2026-06-19T12:00:02.548805094Z   Using cached idna-3.18-py3-none-any.whl (65 kB)
+2026-06-19T12:00:02.990152513Z Collecting urllib3<3,>=1.26
+2026-06-19T12:00:02.991877936Z   Using cached urllib3-2.7.0-py3-none-any.whl (131 kB)
+2026-06-19T12:00:03.295184658Z Collecting certifi>=2023.5.7
+2026-06-19T12:00:03.296790766Z   Using cached certifi-2026.6.17-py3-none-any.whl (133 kB)
+2026-06-19T12:00:03.775567623Z Collecting anyio<5,>=3.4.0
+2026-06-19T12:00:03.778186293Z   Using cached anyio-4.14.0-py3-none-any.whl (123 kB)
+2026-06-19T12:00:04.103910897Z Collecting soupsieve>=1.6.1
+2026-06-19T12:00:04.105589008Z   Using cached soupsieve-2.8.4-py3-none-any.whl (37 kB)
+2026-06-19T12:00:04.501311469Z Collecting MarkupSafe>=2.0
+2026-06-19T12:00:04.501520716Z   Obtaining dependency information for MarkupSafe>=2.0 from https://download.pytorch.org/whl/markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata
+2026-06-19T12:00:04.511135128Z   Downloading https://download.pytorch.org/whl/markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2026-06-19T12:00:04.869869935Z Collecting PySocks!=1.5.7,>=1.5.6
+2026-06-19T12:00:04.871543516Z   Using cached PySocks-1.7.1-py3-none-any.whl (16 kB)
+2026-06-19T12:00:05.282337976Z Collecting six>=1.5
+2026-06-19T12:00:05.284010727Z   Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-06-19T12:00:05.327746857Z Using cached pillow-11.0.0-cp311-cp311-manylinux_2_28_x86_64.whl (4.4 MB)
+2026-06-19T12:00:05.34102172Z Using cached sympy-1.13.1-py3-none-any.whl (6.2 MB)
+2026-06-19T12:00:05.352326904Z Using cached networkx-3.6.1-py3-none-any.whl (2.1 MB)
+2026-06-19T12:00:05.364527015Z Downloading https://download.pytorch.org/whl/markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2026-06-19T12:00:05.40743874Z Using cached mpmath-1.3.0-py3-none-any.whl (536 kB)
+2026-06-19T12:00:05.413831804Z Using cached pillow-11.0.0-cp311-cp311-manylinux_2_28_x86_64.whl (4.4 MB)
+2026-06-19T12:00:05.432300466Z Using cached sympy-1.13.1-py3-none-any.whl (6.2 MB)
+2026-06-19T12:00:05.456576694Z Using cached networkx-3.6.1-py3-none-any.whl (2.1 MB)
+2026-06-19T12:00:05.549739177Z Using cached https://download.pytorch.org/whl/markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2026-06-19T12:00:05.552747148Z Using cached mpmath-1.3.0-py3-none-any.whl (536 kB)
+2026-06-19T12:00:06.136074114Z Installing collected packages: py-cpuinfo, mpmath, websockets, uvloop, urllib3, typing-extensions, tqdm, sympy, soupsieve, six, pyyaml, python-multipart, python-dotenv, PySocks, pyparsing, psutil, pillow, packaging, numpy, networkx, MarkupSafe, kiwisolver, idna, httptools, h11, fsspec, fonttools, filelock, cycler, click, charset_normalizer, certifi, annotated-types, uvicorn, scipy, requests, python-dateutil, pydantic-core, opencv-python-headless, opencv-python, jinja2, contourpy, beautifulsoup4, anyio, watchfiles, torch, starlette, pydantic, pandas, matplotlib, ultralytics-thop, torchvision, seaborn, gdown, fastapi, ultralytics
+2026-06-19T12:00:47.872515573Z Successfully installed MarkupSafe-3.0.3 PySocks-1.7.1 annotated-types-0.7.0 anyio-4.14.0 beautifulsoup4-4.15.0 certifi-2026.6.17 charset_normalizer-3.4.7 click-8.4.1 contourpy-1.3.3 cycler-0.12.1 fastapi-0.115.5 filelock-3.29.4 fonttools-4.63.0 fsspec-2026.6.0 gdown-5.2.0 h11-0.16.0 httptools-0.8.0 idna-3.18 jinja2-3.1.6 kiwisolver-1.5.0 matplotlib-3.11.0 mpmath-1.3.0 networkx-3.6.1 numpy-2.4.6 opencv-python-4.13.0.92 opencv-python-headless-4.10.0.84 packaging-26.2 pandas-3.0.3 pillow-11.0.0 psutil-7.2.2 py-cpuinfo-9.0.0 pydantic-2.10.3 pydantic-core-2.27.1 pyparsing-3.3.2 python-dateutil-2.9.0.post0 python-dotenv-1.2.2 python-multipart-0.0.20 pyyaml-6.0.3 requests-2.34.2 scipy-1.17.1 seaborn-0.13.2 six-1.17.0 soupsieve-2.8.4 starlette-0.41.3 sympy-1.13.1 torch-2.5.1+cpu torchvision-0.20.1+cpu tqdm-4.68.3 typing-extensions-4.15.0 ultralytics-8.3.55 ultralytics-thop-2.0.20 urllib3-2.7.0 uvicorn-0.32.1 uvloop-0.22.1 watchfiles-1.2.0 websockets-16.0
+2026-06-19T12:00:47.916433828Z 
+2026-06-19T12:00:47.916451799Z [notice] A new release of pip available: 22.3 -> 26.1.2
+2026-06-19T12:00:47.916456439Z [notice] To update, run: pip install --upgrade pip
+2026-06-19T12:00:49.448039149Z ==> Uploading build...
+2026-06-19T12:01:05.843767471Z ==> Uploaded in 11.0s. Compression took 5.4s
+2026-06-19T12:01:05.974003631Z ==> Build successful 🎉
+2026-06-19T12:01:08.496056888Z ==> Deploying...
+2026-06-19T12:01:08.582605236Z ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2026-06-19T12:01:49.917298634Z ==> Running 'uvicorn app.main:app --host 0.0.0.0 --port $PORT'
+2026-06-19T12:02:02.31917171Z INFO:     Started server process [60]
+2026-06-19T12:02:02.31919225Z INFO:     Waiting for application startup.
+2026-06-19T12:02:02.319369275Z INFO:app.main:Pre-loading YOLO model at startup...
+2026-06-19T12:02:02.31952417Z INFO:app.model:Model not found locally. Downloading from Google Drive...
+2026-06-19T12:02:10.730491925Z Downloading...
+2026-06-19T12:02:10.730513646Z From: https://drive.google.com/uc?id=1VJTHvB99crBmUiw6eMZ6vSIVJID_eW5o
+2026-06-19T12:02:10.730519336Z To: /opt/render/project/src/bookmyslot-ai-service/models/best.pt
+2026-06-19T12:02:11.212721827Z   0%|          | 0.00/22.5M [00:00<?, ?B/s] 16%|█▋        | 3.67M/22.5M [00:00<00:00, 22.2MB/s] 44%|████▍     | 9.96M/22.5M [00:00<00:00, 40.8MB/s] 72%|███████▏  | 16.3M/22.5M [00:00<00:00, 49.4MB/s] 98%|█████████▊| 22.0M/22.5M [00:00<00:00, 52.3MB/s]100%|██████████| 22.5M/22.5M [00:00<00:00, 47.9MB/s]
+2026-06-19T12:02:11.216326677Z INFO:app.model:Model downloaded successfully (21.5 MB)
+2026-06-19T12:02:14.498580976Z ==> No open ports detected, continuing to scan...
+2026-06-19T12:02:14.667519957Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-06-19T12:02:41.119815055Z WARNING:matplotlib.font_manager:Matplotlib is building the font cache; this may take a moment.
+2026-06-19T12:02:42.017475598Z INFO:matplotlib.font_manager:generated new fontManager
+2026-06-19T12:02:48.112336468Z Creating new Ultralytics Settings v0.0.6 file ✅ 
+2026-06-19T12:02:48.112369769Z View Ultralytics Settings with 'yolo settings' or at '/opt/render/.config/Ultralytics/settings.json'
+2026-06-19T12:02:48.112382159Z Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+2026-06-19T12:02:57.515115524Z INFO:app.model:Loading YOLO model from models/best.pt
+2026-06-19T12:02:58.217905328Z INFO:app.model:Model loaded successfully
+2026-06-19T12:02:58.217934898Z INFO:app.main:Model ready.
+2026-06-19T12:02:58.218083573Z INFO:     Application startup complete.
+2026-06-19T12:02:58.220579712Z INFO:     Uvicorn running on http://0.0.0.0:10000 (Press CTRL+C to quit)
+2026-06-19T12:02:58.703662467Z INFO:     127.0.0.1:39168 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+2026-06-19T12:03:00.080296242Z INFO:     34.168.49.152:0 - "GET / HTTP/1.1" 200 OK
+2026-06-19T12:03:00.141105701Z ==> Your service is live 🎉
+2026-06-19T12:03:00.235408034Z ==> 
+2026-06-19T12:03:00.241068012Z ==> ///////////////////////////////////////////////////////////
+2026-06-19T12:03:00.247389789Z ==> 
+2026-06-19T12:03:00.254329904Z ==> Available at your primary URL https://bookmyslot-ai-analyser-service.onrender.com
+2026-06-19T12:03:00.26452992Z ==> 
+2026-06-19T12:03:00.275560229Z ==> ///////////////////////////////////////////////////////////
