@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookMySlot — X-ray Analyser</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0f1117;
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      color: #f8fafc;
+    }
+
+    .subtitle {
+      font-size: 0.85rem;
+      color: #64748b;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: #1e2230;
+      border: 1px solid #2d3348;
+      border-radius: 12px;
+      padding: 1.5rem;
+      width: 100%;
+      max-width: 780px;
+    }
+
+    /* Drop zone */
+    #drop-zone {
+      border: 2px dashed #3b4460;
+      border-radius: 8px;
+      padding: 2.5rem 1rem;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      position: relative;
+    }
+    #drop-zone.drag-over {
+      border-color: #6366f1;
+      background: #1a1d2e;
+    }
+    #drop-zone input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+    .drop-icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .drop-text { font-size: 0.9rem; color: #94a3b8; }
+    .drop-text span { color: #818cf8; font-weight: 600; }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 0.55rem 1.25rem;
+      border-radius: 7px;
+      border: none;
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    button:disabled { opacity: 0.4; cursor: not-allowed; }
+    #btn-analyse  { background: #6366f1; color: #fff; }
+    #btn-annotate { background: #0ea5e9; color: #fff; }
+    #btn-clear    { background: #2d3348; color: #94a3b8; margin-left: auto; }
+    button:not(:disabled):hover { opacity: 0.85; }
+
+    /* Status */
+    #status {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: #64748b;
+      min-height: 1.2em;
+    }
+    #status.error { color: #f87171; }
+    #status.ok    { color: #34d399; }
+
+    /* Results area */
+    #results { margin-top: 1.5rem; display: none; }
+
+    #annotated-img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #2d3348;
+      display: none;
+    }
+
+    .findings-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.25rem;
+      margin-bottom: 0.6rem;
+    }
+    .findings-header h2 { font-size: 0.95rem; font-weight: 600; color: #cbd5e1; }
+    .badge {
+      font-size: 0.75rem;
+      background: #2d3348;
+      color: #94a3b8;
+      padding: 0.2rem 0.6rem;
+      border-radius: 99px;
+    }
+
+    .findings-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      max-height: 320px;
+      overflow-y: auto;
+      padding-right: 0.25rem;
+    }
+    .findings-list::-webkit-scrollbar { width: 4px; }
+    .findings-list::-webkit-scrollbar-track { background: #1e2230; }
+    .findings-list::-webkit-scrollbar-thumb { background: #3b4460; border-radius: 4px; }
+
+    .finding-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #161922;
+      border-radius: 6px;
+      padding: 0.45rem 0.75rem;
+      font-size: 0.82rem;
+    }
+    .dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .finding-label { flex: 1; color: #e2e8f0; }
+    .finding-conf  { color: #64748b; font-size: 0.78rem; }
+    .finding-loc   { color: #475569; font-size: 0.72rem; }
+
+    .legend {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      color: #64748b;
+    }
+    .legend-item { display: flex; align-items: center; gap: 0.35rem; }
+
+    /* Download link */
+    #download-link {
+      display: none;
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+      color: #818cf8;
+      text-decoration: none;
+    }
+    #download-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>BookMySlot — X-ray Analyser</h1>
+  <p class="subtitle">Visual test tool for the /analyse-xray endpoints</p>
+
+  <div class="card">
+    <div id="drop-zone">
+      <input type="file" id="file-input" accept="image/jpeg,image/png,image/webp,image/bmp" />
+      <div class="drop-icon">🦷</div>
+      <div class="drop-text">Drop an X-ray image here, or <span>browse</span></div>
+      <div class="drop-text" style="margin-top:0.25rem;font-size:0.75rem;">JPEG · PNG · WebP · BMP</div>
+    </div>
+
+    <div class="controls">
+      <button id="btn-analyse"  disabled>Analyse (JSON)</button>
+      <button id="btn-annotate" disabled>Annotate (Image)</button>
+      <button id="btn-clear"    disabled>Clear</button>
+    </div>
+
+    <div id="status">Choose an image to begin.</div>
+
+    <div id="results">
+      <img id="annotated-img" alt="Annotated X-ray" />
+      <a id="download-link" download="annotated.png">⬇ Download annotated image</a>
+
+      <div class="findings-header">
+        <h2>Findings</h2>
+        <span class="badge" id="count-badge">0 findings</span>
+      </div>
+
+      <div class="findings-list" id="findings-list"></div>
+
+      <div class="legend">
+        <div class="legend-item"><div class="dot" style="background:#FFB400"></div> Caries</div>
+        <div class="legend-item"><div class="dot" style="background:#FF5050"></div> Deep Caries</div>
+        <div class="legend-item"><div class="dot" style="background:#50C878"></div> Periapical Lesion</div>
+        <div class="legend-item"><div class="dot" style="background:#64B4FF"></div> Impacted Tooth</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const CLASS_COLOURS = {
+      0: '#FFB400',
+      1: '#FF5050',
+      2: '#50C878',
+      3: '#64B4FF',
+    };
+
+    const dropZone   = document.getElementById('drop-zone');
+    const fileInput  = document.getElementById('file-input');
+    const btnAnalyse = document.getElementById('btn-analyse');
+    const btnAnnotate= document.getElementById('btn-annotate');
+    const btnClear   = document.getElementById('btn-clear');
+    const statusEl   = document.getElementById('status');
+    const resultsEl  = document.getElementById('results');
+    const imgEl      = document.getElementById('annotated-img');
+    const dlLink     = document.getElementById('download-link');
+    const listEl     = document.getElementById('findings-list');
+    const countBadge = document.getElementById('count-badge');
+
+    let currentFile = null;
+
+    function setStatus(msg, type = '') {
+      statusEl.textContent = msg;
+      statusEl.className = type;
+    }
+
+    function resetResults() {
+      resultsEl.style.display = 'none';
+      imgEl.style.display = 'none';
+      imgEl.src = '';
+      dlLink.style.display = 'none';
+      listEl.innerHTML = '';
+      countBadge.textContent = '0 findings';
+    }
+
+    function onFileSelected(file) {
+      if (!file) return;
+      currentFile = file;
+      btnAnalyse.disabled  = false;
+      btnAnnotate.disabled = false;
+      btnClear.disabled    = false;
+      setStatus(`Ready: ${file.name} (${(file.size / 1024).toFixed(1)} KB)`);
+      resetResults();
+    }
+
+    fileInput.addEventListener('change', () => onFileSelected(fileInput.files[0]));
+
+    dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+    dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
+    dropZone.addEventListener('drop', e => {
+      e.preventDefault();
+      dropZone.classList.remove('drag-over');
+      onFileSelected(e.dataTransfer.files[0]);
+    });
+
+    btnClear.addEventListener('click', () => {
+      currentFile = null;
+      fileInput.value = '';
+      btnAnalyse.disabled = btnAnnotate.disabled = btnClear.disabled = true;
+      setStatus('Choose an image to begin.');
+      resetResults();
+    });
+
+    function renderFindings(findings) {
+      listEl.innerHTML = '';
+      countBadge.textContent = `${findings.length} finding${findings.length !== 1 ? 's' : ''}`;
+      resultsEl.style.display = 'block';
+
+      if (findings.length === 0) {
+        listEl.innerHTML = '<div class="finding-row" style="color:#64748b">No findings detected.</div>';
+        return;
+      }
+
+      findings.forEach(f => {
+        const colour = CLASS_COLOURS[f.class_id] || '#aaa';
+        const loc = f.location;
+        const row = document.createElement('div');
+        row.className = 'finding-row';
+        row.innerHTML = `
+          <div class="dot" style="background:${colour}"></div>
+          <span class="finding-label">${f.label}</span>
+          <span class="finding-conf">${f.confidence.toFixed(0)}%</span>
+          <span class="finding-loc">x:${loc.x.toFixed(0)} y:${loc.y.toFixed(0)} ${loc.width.toFixed(0)}×${loc.height.toFixed(0)}px</span>
+        `;
+        listEl.appendChild(row);
+      });
+    }
+
+    btnAnalyse.addEventListener('click', async () => {
+      if (!currentFile) return;
+      btnAnalyse.disabled = btnAnnotate.disabled = true;
+      setStatus('Running inference…');
+      resetResults();
+
+      const form = new FormData();
+      form.append('file', currentFile);
+
+      try {
+        const res = await fetch('/analyse-xray', { method: 'POST', body: form });
+        const data = await res.json();
+        if (!data.success) {
+          setStatus(`Error: ${data.message}`, 'error');
+        } else {
+          renderFindings(data.analysis.findings);
+          setStatus(`Done — ${data.analysis.findings.length} finding(s) returned.`, 'ok');
+        }
+      } catch (err) {
+        setStatus(`Request failed: ${err.message}`, 'error');
+      } finally {
+        btnAnalyse.disabled = btnAnnotate.disabled = false;
+      }
+    });
+
+    btnAnnotate.addEventListener('click', async () => {
+      if (!currentFile) return;
+      btnAnalyse.disabled = btnAnnotate.disabled = true;
+      setStatus('Running inference + rendering annotation…');
+      resetResults();
+
+      const form = new FormData();
+      form.append('file', currentFile);
+
+      try {
+        const res = await fetch('/analyse-xray/annotated', { method: 'POST', body: form });
+        if (!res.ok) {
+          const text = await res.text();
+          setStatus(`Error: ${text}`, 'error');
+          return;
+        }
+
+        const count = res.headers.get('X-Finding-Count') ?? '?';
+        const blob = await res.blob();
+        const url  = URL.createObjectURL(blob);
+
+        imgEl.src = url;
+        imgEl.style.display = 'block';
+        dlLink.href = url;
+        dlLink.style.display = 'inline';
+        resultsEl.style.display = 'block';
+
+        setStatus(`Done — ${count} finding(s) drawn on image.`, 'ok');
+        countBadge.textContent = `${count} finding${count !== '1' ? 's' : ''}`;
+      } catch (err) {
+        setStatus(`Request failed: ${err.message}`, 'error');
+      } finally {
+        btnAnalyse.disabled = btnAnnotate.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

@@ -7,7 +7,8 @@ from pathlib import Path
 
 from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import StreamingResponse
+from fastapi.responses import HTMLResponse, StreamingResponse
+from fastapi.staticfiles import StaticFiles
 
 from app.schemas import AnalyseResponse, HealthResponse
 from app import model as model_service
@@ -53,6 +54,15 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+_STATIC_DIR = Path(__file__).parent / "static"
+app.mount("/static", StaticFiles(directory=str(_STATIC_DIR)), name="static")
+
+
+@app.get("/test", response_class=HTMLResponse)
+def test_ui():
+    html = (_STATIC_DIR / "test.html").read_text()
+    return HTMLResponse(content=html)
 
 
 @app.get("/", response_model=HealthResponse)
