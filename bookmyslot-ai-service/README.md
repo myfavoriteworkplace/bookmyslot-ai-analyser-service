@@ -1,3 +1,13 @@
+---
+title: Bookmyslot AI Service
+emoji: 🦷
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # bookmyslot-ai-service
 
 Python FastAPI microservice for AI-powered dental X-ray analysis using YOLOv8.
