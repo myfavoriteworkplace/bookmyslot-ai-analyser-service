@@ -1,0 +1,246 @@
+2026-06-19T10:49:00.125900366Z ==> Cloning from https://github.com/myfavoriteworkplace/bookmyslot-ai-analyser-service
+2026-06-19T10:49:01.000850286Z ==> Checking out commit 265cd3c9576282f08e8f37049577d28034912161 in branch main
+2026-06-19T10:49:25.513502665Z ==> Using Python version 3.11.0 via /opt/render/project/src/bookmyslot-ai-service/.python-version
+2026-06-19T10:49:25.513517626Z ==> Docs on specifying a Python version: https://render.com/docs/python-version
+2026-06-19T10:49:25.513648588Z ==> Installing Python version 3.11.0...
+2026-06-19T10:49:38.199624331Z ==> Using Poetry version 2.1.3 (default)
+2026-06-19T10:49:38.272468839Z ==> Docs on specifying a Poetry version: https://render.com/docs/poetry-version
+2026-06-19T10:49:38.353421295Z ==> Running build command 'pip install -r requirements.txt'...
+2026-06-19T10:49:38.993809257Z Collecting fastapi==0.115.5
+2026-06-19T10:49:39.049740219Z   Downloading fastapi-0.115.5-py3-none-any.whl (94 kB)
+2026-06-19T10:49:39.120295551Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.9/94.9 kB 1.3 MB/s eta 0:00:00
+2026-06-19T10:49:39.234257217Z Collecting uvicorn[standard]==0.32.1
+2026-06-19T10:49:39.244220474Z   Downloading uvicorn-0.32.1-py3-none-any.whl (63 kB)
+2026-06-19T10:49:39.299224631Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.8/63.8 kB 1.0 MB/s eta 0:00:00
+2026-06-19T10:49:39.629914123Z Collecting ultralytics==8.3.55
+2026-06-19T10:49:39.64055175Z   Downloading ultralytics-8.3.55-py3-none-any.whl (904 kB)
+2026-06-19T10:49:39.756443867Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 904.3/904.3 kB 8.0 MB/s eta 0:00:00
+2026-06-19T10:49:39.913848737Z Collecting torch==2.5.1
+2026-06-19T10:49:39.925888927Z   Downloading torch-2.5.1-cp311-cp311-manylinux1_x86_64.whl (906.5 MB)
+2026-06-19T10:50:03.570675147Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 906.5/906.5 MB 588.2 kB/s eta 0:00:00
+2026-06-19T10:50:04.361253397Z Collecting torchvision==0.20.1
+2026-06-19T10:50:04.37227005Z   Downloading torchvision-0.20.1-cp311-cp311-manylinux1_x86_64.whl (7.2 MB)
+2026-06-19T10:50:04.451519249Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.2/7.2 MB 93.0 MB/s eta 0:00:00
+2026-06-19T10:50:04.488045965Z Collecting python-multipart==0.0.18
+2026-06-19T10:50:04.498252196Z   Downloading python_multipart-0.0.18-py3-none-any.whl (24 kB)
+2026-06-19T10:50:04.915159996Z Collecting pillow==11.0.0
+2026-06-19T10:50:04.926117289Z   Downloading pillow-11.0.0-cp311-cp311-manylinux_2_28_x86_64.whl (4.4 MB)
+2026-06-19T10:50:04.971549005Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 101.3 MB/s eta 0:00:00
+2026-06-19T10:50:05.102687402Z Collecting opencv-python-headless==4.10.0.84
+2026-06-19T10:50:05.114288814Z   Downloading opencv_python_headless-4.10.0.84-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (49.9 MB)
+2026-06-19T10:50:05.639675754Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.9/49.9 MB 35.4 MB/s eta 0:00:00
+2026-06-19T10:50:05.950819028Z Collecting pydantic==2.10.3
+2026-06-19T10:50:05.961425915Z   Downloading pydantic-2.10.3-py3-none-any.whl (456 kB)
+2026-06-19T10:50:05.981736435Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 457.0/457.0 kB 26.4 MB/s eta 0:00:00
+2026-06-19T10:50:06.018361132Z Collecting gdown==5.2.0
+2026-06-19T10:50:06.028697085Z   Downloading gdown-5.2.0-py3-none-any.whl (18 kB)
+2026-06-19T10:50:06.128695001Z Collecting starlette<0.42.0,>=0.40.0
+2026-06-19T10:50:06.139226277Z   Downloading starlette-0.41.3-py3-none-any.whl (73 kB)
+2026-06-19T10:50:06.148153708Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.2/73.2 kB 9.5 MB/s eta 0:00:00
+2026-06-19T10:50:06.241992747Z Collecting typing-extensions>=4.8.0
+2026-06-19T10:50:06.251251573Z   Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+2026-06-19T10:50:06.258395805Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 7.4 MB/s eta 0:00:00
+2026-06-19T10:50:06.31579448Z Collecting click>=7.0
+2026-06-19T10:50:06.325244439Z   Downloading click-8.4.1-py3-none-any.whl (116 kB)
+2026-06-19T10:50:06.332463603Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 116.6/116.6 kB 20.8 MB/s eta 0:00:00
+2026-06-19T10:50:06.355330883Z Collecting h11>=0.8
+2026-06-19T10:50:06.364519618Z   Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-06-19T10:50:06.436763886Z Collecting httptools>=0.6.3
+2026-06-19T10:50:06.445712957Z   Downloading httptools-0.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (464 kB)
+2026-06-19T10:50:06.453454409Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 464.7/464.7 kB 80.3 MB/s eta 0:00:00
+2026-06-19T10:50:06.484904625Z Collecting python-dotenv>=0.13
+2026-06-19T10:50:06.493980668Z   Downloading python_dotenv-1.2.2-py3-none-any.whl (22 kB)
+2026-06-19T10:50:06.578791945Z Collecting pyyaml>=5.1
+2026-06-19T10:50:06.588246584Z   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+2026-06-19T10:50:06.598964292Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 94.7 MB/s eta 0:00:00
+2026-06-19T10:50:06.723580587Z Collecting uvloop!=0.15.0,!=0.15.1,>=0.14.0
+2026-06-19T10:50:06.732996835Z   Downloading uvloop-0.22.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.8 MB)
+2026-06-19T10:50:06.767408017Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 118.0 MB/s eta 0:00:00
+2026-06-19T10:50:06.947431804Z Collecting watchfiles>=0.13
+2026-06-19T10:50:06.956847853Z   Downloading watchfiles-1.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (456 kB)
+2026-06-19T10:50:06.969315389Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 456.9/456.9 kB 49.0 MB/s eta 0:00:00
+2026-06-19T10:50:07.1755683Z Collecting websockets>=10.4
+2026-06-19T10:50:07.185025649Z   Downloading websockets-16.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (184 kB)
+2026-06-19T10:50:07.19208866Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 184.6/184.6 kB 36.5 MB/s eta 0:00:00
+2026-06-19T10:50:07.680729241Z Collecting numpy>=1.23.0
+2026-06-19T10:50:07.690138939Z   Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+2026-06-19T10:50:07.8437241Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 91.2 MB/s eta 0:00:00
+2026-06-19T10:50:08.204676538Z Collecting matplotlib>=3.3.0
+2026-06-19T10:50:08.214102377Z   Downloading matplotlib-3.11.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.0 MB)
+2026-06-19T10:50:08.309336848Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.0/10.0 MB 107.7 MB/s eta 0:00:00
+2026-06-19T10:50:08.475006138Z Collecting opencv-python>=4.6.0
+2026-06-19T10:50:08.486780944Z   Downloading opencv_python-4.13.0.92-cp37-abi3-manylinux_2_28_x86_64.whl (72.9 MB)
+2026-06-19T10:50:09.196925556Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.9/72.9 MB 28.3 MB/s eta 0:00:00
+2026-06-19T10:50:09.306160457Z Collecting requests>=2.23.0
+2026-06-19T10:50:09.315942081Z   Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+2026-06-19T10:50:09.320797958Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.1/73.1 kB 21.0 MB/s eta 0:00:00
+2026-06-19T10:50:09.619417284Z Collecting scipy>=1.4.1
+2026-06-19T10:50:09.628627159Z   Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+2026-06-19T10:50:10.015424355Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 49.0 MB/s eta 0:00:00
+2026-06-19T10:50:10.120648123Z Collecting tqdm>=4.64.0
+2026-06-19T10:50:10.130165423Z   Downloading tqdm-4.68.3-py3-none-any.whl (78 kB)
+2026-06-19T10:50:10.134891808Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.3/78.3 kB 23.7 MB/s eta 0:00:00
+2026-06-19T10:50:10.279832682Z Collecting psutil
+2026-06-19T10:50:10.289389353Z   Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+2026-06-19T10:50:10.295075442Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 kB 39.4 MB/s eta 0:00:00
+2026-06-19T10:50:10.316150504Z Collecting py-cpuinfo
+2026-06-19T10:50:10.32541248Z   Downloading py_cpuinfo-9.0.0-py3-none-any.whl (22 kB)
+2026-06-19T10:50:10.63185838Z Collecting pandas>=1.1.4
+2026-06-19T10:50:10.641339709Z   Downloading pandas-3.0.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (11.3 MB)
+2026-06-19T10:50:10.741199003Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 113.2 MB/s eta 0:00:00
+2026-06-19T10:50:10.785386309Z Collecting seaborn>=0.11.0
+2026-06-19T10:50:10.794478723Z   Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+2026-06-19T10:50:10.801492273Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 294.9/294.9 kB 57.3 MB/s eta 0:00:00
+2026-06-19T10:50:10.835396177Z Collecting ultralytics-thop>=2.0.0
+2026-06-19T10:50:10.844332028Z   Downloading ultralytics_thop-2.0.20-py3-none-any.whl (28 kB)
+2026-06-19T10:50:10.926568044Z Collecting filelock
+2026-06-19T10:50:10.936067494Z   Downloading filelock-3.29.4-py3-none-any.whl (42 kB)
+2026-06-19T10:50:10.941260346Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.8/42.8 kB 11.4 MB/s eta 0:00:00
+2026-06-19T10:50:10.981771524Z Collecting networkx
+2026-06-19T10:50:10.990851738Z   Downloading networkx-3.6.1-py3-none-any.whl (2.1 MB)
+2026-06-19T10:50:11.011905469Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 108.9 MB/s eta 0:00:00
+2026-06-19T10:50:11.045926695Z Collecting jinja2
+2026-06-19T10:50:11.05509179Z   Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-06-19T10:50:11.060584326Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 37.3 MB/s eta 0:00:00
+2026-06-19T10:50:11.105499584Z Collecting fsspec
+2026-06-19T10:50:11.114558217Z   Downloading fsspec-2026.6.0-py3-none-any.whl (203 kB)
+2026-06-19T10:50:11.120953098Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 203.9/203.9 kB 46.1 MB/s eta 0:00:00
+2026-06-19T10:50:11.149325255Z Collecting nvidia-cuda-nvrtc-cu12==12.4.127
+2026-06-19T10:50:11.166910782Z   Downloading nvidia_cuda_nvrtc_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (24.6 MB)
+2026-06-19T10:50:11.396232916Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.6/24.6 MB 72.9 MB/s eta 0:00:00
+2026-06-19T10:50:11.441154524Z Collecting nvidia-cuda-runtime-cu12==12.4.127
+2026-06-19T10:50:11.45044995Z   Downloading nvidia_cuda_runtime_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (883 kB)
+2026-06-19T10:50:11.462180515Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 883.7/883.7 kB 92.7 MB/s eta 0:00:00
+2026-06-19T10:50:11.491122002Z Collecting nvidia-cuda-cupti-cu12==12.4.127
+2026-06-19T10:50:11.503156591Z   Downloading nvidia_cuda_cupti_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (13.8 MB)
+2026-06-19T10:50:11.620704514Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.8/13.8 MB 110.9 MB/s eta 0:00:00
+2026-06-19T10:50:11.669826848Z Collecting nvidia-cudnn-cu12==9.1.0.70
+2026-06-19T10:50:11.679188835Z   Downloading nvidia_cudnn_cu12-9.1.0.70-py3-none-manylinux2014_x86_64.whl (664.8 MB)
+2026-06-19T10:50:25.539298735Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 664.8/664.8 MB 1.0 MB/s eta 0:00:00
+2026-06-19T10:50:26.043324298Z Collecting nvidia-cublas-cu12==12.4.5.8
+2026-06-19T10:50:26.052407841Z   Downloading nvidia_cublas_cu12-12.4.5.8-py3-none-manylinux2014_x86_64.whl (363.4 MB)
+2026-06-19T10:50:31.264690744Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 363.4/363.4 MB 3.4 MB/s eta 0:00:00
+2026-06-19T10:50:31.564200484Z Collecting nvidia-cufft-cu12==11.2.1.3
+2026-06-19T10:50:31.575309939Z   Downloading nvidia_cufft_cu12-11.2.1.3-py3-none-manylinux2014_x86_64.whl (211.5 MB)
+2026-06-19T10:50:34.99046942Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 211.5/211.5 MB 4.8 MB/s eta 0:00:00
+2026-06-19T10:50:35.171137237Z Collecting nvidia-curand-cu12==10.3.5.147
+2026-06-19T10:50:35.180268601Z   Downloading nvidia_curand_cu12-10.3.5.147-py3-none-manylinux2014_x86_64.whl (56.3 MB)
+2026-06-19T10:50:35.827148936Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 MB 31.1 MB/s eta 0:00:00
+2026-06-19T10:50:35.897684677Z Collecting nvidia-cusolver-cu12==11.6.1.9
+2026-06-19T10:50:35.912335068Z   Downloading nvidia_cusolver_cu12-11.6.1.9-py3-none-manylinux2014_x86_64.whl (127.9 MB)
+2026-06-19T10:50:38.774383962Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 127.9/127.9 MB 5.0 MB/s eta 0:00:00
+2026-06-19T10:50:39.003695086Z Collecting nvidia-cusparse-cu12==12.3.1.170
+2026-06-19T10:50:39.014018429Z   Downloading nvidia_cusparse_cu12-12.3.1.170-py3-none-manylinux2014_x86_64.whl (207.5 MB)
+2026-06-19T10:50:45.140605916Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 207.5/207.5 MB 2.0 MB/s eta 0:00:00
+2026-06-19T10:50:45.479629248Z Collecting nvidia-nccl-cu12==2.21.5
+2026-06-19T10:50:45.49117155Z   Downloading nvidia_nccl_cu12-2.21.5-py3-none-manylinux2014_x86_64.whl (188.7 MB)
+2026-06-19T10:50:48.244684494Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.7/188.7 MB 6.9 MB/s eta 0:00:00
+2026-06-19T10:50:48.414417578Z Collecting nvidia-nvtx-cu12==12.4.127
+2026-06-19T10:50:48.424235813Z   Downloading nvidia_nvtx_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (99 kB)
+2026-06-19T10:50:48.429681999Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 99.1/99.1 kB 27.0 MB/s eta 0:00:00
+2026-06-19T10:50:48.459613221Z Collecting nvidia-nvjitlink-cu12==12.4.127
+2026-06-19T10:50:48.472508584Z   Downloading nvidia_nvjitlink_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (21.1 MB)
+2026-06-19T10:50:48.708505903Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.1/21.1 MB 71.5 MB/s eta 0:00:00
+2026-06-19T10:50:48.762447643Z Collecting triton==3.1.0
+2026-06-19T10:50:48.780602199Z   Downloading triton-3.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (209.5 MB)
+2026-06-19T10:50:54.349883897Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 209.5/209.5 MB 2.5 MB/s eta 0:00:00
+2026-06-19T10:50:54.667412391Z Collecting sympy==1.13.1
+2026-06-19T10:50:54.676666886Z   Downloading sympy-1.13.1-py3-none-any.whl (6.2 MB)
+2026-06-19T10:50:55.073120074Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 15.7 MB/s eta 0:00:00
+2026-06-19T10:50:55.337937058Z Collecting annotated-types>=0.6.0
+2026-06-19T10:50:55.347026021Z   Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+2026-06-19T10:50:57.13775745Z Collecting pydantic-core==2.27.1
+2026-06-19T10:50:57.150834887Z   Downloading pydantic_core-2.27.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+2026-06-19T10:50:57.198120072Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 47.1 MB/s eta 0:00:00
+2026-06-19T10:50:57.246151238Z Collecting beautifulsoup4
+2026-06-19T10:50:57.255390694Z   Downloading beautifulsoup4-4.15.0-py3-none-any.whl (109 kB)
+2026-06-19T10:50:57.262464336Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.9/109.9 kB 21.3 MB/s eta 0:00:00
+2026-06-19T10:50:57.332653852Z Collecting mpmath<1.4,>=1.1.0
+2026-06-19T10:50:57.344311065Z   Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+2026-06-19T10:50:57.355514072Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 59.6 MB/s eta 0:00:00
+2026-06-19T10:50:57.549433948Z Collecting contourpy>=1.0.1
+2026-06-19T10:50:57.558844616Z   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+2026-06-19T10:50:57.5717397Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 32.7 MB/s eta 0:00:00
+2026-06-19T10:50:57.593098026Z Collecting cycler>=0.10
+2026-06-19T10:50:57.602821469Z   Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+2026-06-19T10:50:57.969502828Z Collecting fonttools>=4.22.0
+2026-06-19T10:50:57.978890756Z   Downloading fonttools-4.63.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.1 MB)
+2026-06-19T10:50:58.049387927Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.1/5.1 MB 75.0 MB/s eta 0:00:00
+2026-06-19T10:50:58.311266854Z Collecting kiwisolver>=1.3.1
+2026-06-19T10:50:58.320771884Z   Downloading kiwisolver-1.5.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+2026-06-19T10:50:58.343670354Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 68.9 MB/s eta 0:00:00
+2026-06-19T10:50:58.397594454Z Collecting packaging>=20.0
+2026-06-19T10:50:58.406983862Z   Downloading packaging-26.2-py3-none-any.whl (100 kB)
+2026-06-19T10:50:58.41384544Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.2/100.2 kB 19.5 MB/s eta 0:00:00
+2026-06-19T10:50:58.471086362Z Collecting pyparsing>=3
+2026-06-19T10:50:58.480644573Z   Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+2026-06-19T10:50:58.487214587Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 122.8/122.8 kB 31.8 MB/s eta 0:00:00
+2026-06-19T10:50:58.519448635Z Collecting python-dateutil>=2.7
+2026-06-19T10:50:58.529551034Z   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-06-19T10:50:58.537766033Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 37.7 MB/s eta 0:00:00
+2026-06-19T10:50:58.882945083Z Collecting charset_normalizer<4,>=2
+2026-06-19T10:50:58.892542694Z   Downloading charset_normalizer-3.4.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (214 kB)
+2026-06-19T10:50:58.908025778Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 214.1/214.1 kB 15.4 MB/s eta 0:00:00
+2026-06-19T10:50:58.959505499Z Collecting idna<4,>=2.5
+2026-06-19T10:50:58.968075725Z   Downloading idna-3.18-py3-none-any.whl (65 kB)
+2026-06-19T10:50:58.990487647Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.5/65.5 kB 3.6 MB/s eta 0:00:00
+2026-06-19T10:50:59.053801365Z Collecting urllib3<3,>=1.26
+2026-06-19T10:50:59.064143188Z   Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+2026-06-19T10:50:59.073535776Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 131.1/131.1 kB 18.0 MB/s eta 0:00:00
+2026-06-19T10:50:59.117235265Z Collecting certifi>=2023.5.7
+2026-06-19T10:50:59.1270496Z   Downloading certifi-2026.6.17-py3-none-any.whl (133 kB)
+2026-06-19T10:50:59.135734116Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.3/133.3 kB 19.1 MB/s eta 0:00:00
+2026-06-19T10:50:59.299431666Z Collecting anyio<5,>=3.4.0
+2026-06-19T10:50:59.309046678Z   Downloading anyio-4.14.0-py3-none-any.whl (123 kB)
+2026-06-19T10:50:59.317741955Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 123.5/123.5 kB 19.0 MB/s eta 0:00:00
+2026-06-19T10:50:59.436218742Z Collecting soupsieve>=1.6.1
+2026-06-19T10:50:59.446032117Z   Downloading soupsieve-2.8.4-py3-none-any.whl (37 kB)
+2026-06-19T10:50:59.735750262Z Collecting MarkupSafe>=2.0
+2026-06-19T10:50:59.746581483Z   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2026-06-19T10:50:59.951169947Z Collecting PySocks!=1.5.7,>=1.5.6
+2026-06-19T10:50:59.961119624Z   Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+2026-06-19T10:51:00.212911962Z Collecting six>=1.5
+2026-06-19T10:51:00.222462952Z   Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-06-19T10:51:01.003169956Z Installing collected packages: py-cpuinfo, mpmath, websockets, uvloop, urllib3, typing-extensions, tqdm, sympy, soupsieve, six, pyyaml, python-multipart, python-dotenv, PySocks, pyparsing, psutil, pillow, packaging, nvidia-nvtx-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufft-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, numpy, networkx, MarkupSafe, kiwisolver, idna, httptools, h11, fsspec, fonttools, filelock, cycler, click, charset_normalizer, certifi, annotated-types, uvicorn, triton, scipy, requests, python-dateutil, pydantic-core, opencv-python-headless, opencv-python, nvidia-cusparse-cu12, nvidia-cudnn-cu12, jinja2, contourpy, beautifulsoup4, anyio, watchfiles, starlette, pydantic, pandas, nvidia-cusolver-cu12, matplotlib, torch, seaborn, gdown, fastapi, ultralytics-thop, torchvision, ultralytics
+2026-06-19T10:52:27.014414514Z Successfully installed MarkupSafe-3.0.3 PySocks-1.7.1 annotated-types-0.7.0 anyio-4.14.0 beautifulsoup4-4.15.0 certifi-2026.6.17 charset_normalizer-3.4.7 click-8.4.1 contourpy-1.3.3 cycler-0.12.1 fastapi-0.115.5 filelock-3.29.4 fonttools-4.63.0 fsspec-2026.6.0 gdown-5.2.0 h11-0.16.0 httptools-0.8.0 idna-3.18 jinja2-3.1.6 kiwisolver-1.5.0 matplotlib-3.11.0 mpmath-1.3.0 networkx-3.6.1 numpy-2.4.6 nvidia-cublas-cu12-12.4.5.8 nvidia-cuda-cupti-cu12-12.4.127 nvidia-cuda-nvrtc-cu12-12.4.127 nvidia-cuda-runtime-cu12-12.4.127 nvidia-cudnn-cu12-9.1.0.70 nvidia-cufft-cu12-11.2.1.3 nvidia-curand-cu12-10.3.5.147 nvidia-cusolver-cu12-11.6.1.9 nvidia-cusparse-cu12-12.3.1.170 nvidia-nccl-cu12-2.21.5 nvidia-nvjitlink-cu12-12.4.127 nvidia-nvtx-cu12-12.4.127 opencv-python-4.13.0.92 opencv-python-headless-4.10.0.84 packaging-26.2 pandas-3.0.3 pillow-11.0.0 psutil-7.2.2 py-cpuinfo-9.0.0 pydantic-2.10.3 pydantic-core-2.27.1 pyparsing-3.3.2 python-dateutil-2.9.0.post0 python-dotenv-1.2.2 python-multipart-0.0.18 pyyaml-6.0.3 requests-2.34.2 scipy-1.17.1 seaborn-0.13.2 six-1.17.0 soupsieve-2.8.4 starlette-0.41.3 sympy-1.13.1 torch-2.5.1 torchvision-0.20.1 tqdm-4.68.3 triton-3.1.0 typing-extensions-4.15.0 ultralytics-8.3.55 ultralytics-thop-2.0.20 urllib3-2.7.0 uvicorn-0.32.1 uvloop-0.22.1 watchfiles-1.2.0 websockets-16.0
+2026-06-19T10:52:27.488630986Z 
+2026-06-19T10:52:27.488652897Z [notice] A new release of pip available: 22.3 -> 26.1.2
+2026-06-19T10:52:27.488667057Z [notice] To update, run: pip install --upgrade pip
+2026-06-19T10:52:30.755251942Z ==> Uploading build...
+2026-06-19T10:54:00.368104971Z ==> Uploaded in 67.3s. Compression took 22.3s
+2026-06-19T10:54:01.106904132Z ==> Build successful 🎉
+2026-06-19T10:54:06.102297175Z ==> Deploying...
+2026-06-19T10:54:06.155962577Z ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2026-06-19T10:56:09.385145439Z ==> No open ports detected, continuing to scan...
+2026-06-19T10:56:09.474972443Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-06-19T10:56:21.779338568Z ==> Running 'uvicorn app.main:app --host 0.0.0.0 --port $PORT'
+2026-06-19T10:56:33.483834471Z INFO:     Started server process [60]
+2026-06-19T10:56:33.483857991Z INFO:     Waiting for application startup.
+2026-06-19T10:56:33.484052995Z INFO:app.main:Pre-loading YOLO model at startup...
+2026-06-19T10:56:33.484155647Z INFO:app.model:Model not found locally. Downloading from Google Drive...
+2026-06-19T10:56:38.809335486Z Downloading...
+2026-06-19T10:56:38.809361556Z From: https://drive.google.com/uc?id=1VJTHvB99crBmUiw6eMZ6vSIVJID_eW5o
+2026-06-19T10:56:38.809368757Z To: /opt/render/project/src/bookmyslot-ai-service/models/best.pt
+2026-06-19T10:56:39.178744769Z   0%|          | 0.00/22.5M [00:00<?, ?B/s] 26%|██▌       | 5.77M/22.5M [00:00<00:00, 37.4MB/s] 56%|█████▌    | 12.6M/22.5M [00:00<00:00, 51.9MB/s] 84%|████████▍ | 18.9M/22.5M [00:00<00:00, 56.2MB/s]100%|██████████| 22.5M/22.5M [00:00<00:00, 62.0MB/s]
+2026-06-19T10:56:39.18092246Z INFO:app.model:Model downloaded successfully (21.5 MB)
+2026-06-19T10:57:06.482690574Z WARNING:matplotlib.font_manager:Matplotlib is building the font cache; this may take a moment.
+2026-06-19T10:57:07.186051257Z INFO:matplotlib.font_manager:generated new fontManager
+2026-06-19T10:57:10.004698699Z ==> No open ports detected, continuing to scan...
+2026-06-19T10:57:10.097972584Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-06-19T10:57:12.299568318Z Creating new Ultralytics Settings v0.0.6 file ✅ 
+2026-06-19T10:57:12.299591119Z View Ultralytics Settings with 'yolo settings' or at '/opt/render/.config/Ultralytics/settings.json'
+2026-06-19T10:57:12.299600469Z Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+2026-06-19T10:57:31.884871556Z INFO:app.model:Loading YOLO model from models/best.pt
+2026-06-19T10:57:32.685352708Z INFO:app.model:Model loaded successfully
+2026-06-19T10:57:32.685375878Z INFO:app.main:Model ready.
+2026-06-19T10:57:32.686149123Z INFO:     Application startup complete.
+2026-06-19T10:57:32.686905367Z INFO:     Uvicorn running on http://0.0.0.0:10000 (Press CTRL+C to quit)
+2026-06-19T10:57:33.405136261Z INFO:     127.0.0.1:40706 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+2026-06-19T10:57:37.284668005Z ==> Your service is live 🎉
+2026-06-19T10:57:37.414618489Z ==> 
+2026-06-19T10:57:37.416963505Z ==> ///////////////////////////////////////////////////////////
+2026-06-19T10:57:37.419671491Z ==> 
+2026-06-19T10:57:37.42247075Z ==> Available at your primary URL https://bookmyslot-ai-analyser-service.onrender.com
+2026-06-19T10:57:37.425185456Z ==> 
+2026-06-19T10:57:37.427711127Z ==> ///////////////////////////////////////////////////////////
+2026-06-19T10:57:37.69913452Z INFO:     34.82.226.193:0 - "GET / HTTP/1.1" 200 OK
