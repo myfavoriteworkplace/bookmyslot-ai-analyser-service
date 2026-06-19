@@ -1,0 +1,50 @@
+name: Sync to Hugging Face Space
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'bookmyslot-ai-service/**'
+
+jobs:
+  sync-to-hf:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          lfs: true
+
+      - name: Push bookmyslot-ai-service subfolder to Hugging Face Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git subtree split --prefix bookmyslot-ai-service -b hf-deploy
+          git push \
+            https://itsmyfavoriteworkplace:$HF_TOKEN@huggingface.co/spaces/itsmyfavoriteworkplace/bookmyslot-ai-service \
+            hf-deploy:main --force
+          git branch -D hf-deploy
+
+      - name: Smoke test — wait for Space to rebuild then ping health check
+        run: |
+          echo "Waiting 60 seconds for HF Space to start rebuilding..."
+          sleep 60
+          MAX_ATTEMPTS=10
+          ATTEMPT=0
+          URL="https://itsmyfavoriteworkplace-bookmyslot-ai-service.hf.space/"
+          while [ $ATTEMPT -lt $MAX_ATTEMPTS ]; do
+            ATTEMPT=$((ATTEMPT + 1))
+            echo "Attempt $ATTEMPT / $MAX_ATTEMPTS — pinging $URL"
+            RESPONSE=$(curl --silent --max-time 30 "$URL" || echo "CURL_FAILED")
+            if echo "$RESPONSE" | grep -q '"status":"running"'; then
+              echo "✅ Health check passed — service is running"
+              exit 0
+            fi
+            echo "Not ready yet. Response: $RESPONSE"
+            sleep 30
+          done
+          echo "❌ Service did not become healthy after $MAX_ATTEMPTS attempts"
+          exit 1
