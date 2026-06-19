@@ -9,6 +9,8 @@ MODEL_PATH = os.getenv("MODEL_PATH", "models/best.pt")
 CONFIDENCE_THRESHOLD = float(os.getenv("CONFIDENCE_THRESHOLD", "0.25"))
 MODEL_DOWNLOAD_URL = os.getenv("MODEL_DOWNLOAD_URL", "")
 
+MIN_MODEL_SIZE_BYTES = 1 * 1024 * 1024
+
 CLASS_MAPPING = {
     0: "Finding Type 1",
     1: "Finding Type 2",
@@ -39,10 +41,19 @@ def _download_model(model_path: Path) -> None:
     if not model_path.exists():
         raise RuntimeError(
             "Download appeared to succeed but model file was not found. "
-            "Check that MODEL_DOWNLOAD_URL is a valid Google Drive link with public access."
+            "Check that MODEL_DOWNLOAD_URL points to a valid, publicly shared Google Drive file."
         )
 
-    logger.info("Model downloaded successfully to %s", model_path)
+    actual_size = model_path.stat().st_size
+    if actual_size < MIN_MODEL_SIZE_BYTES:
+        model_path.unlink()
+        raise RuntimeError(
+            f"Downloaded file is only {actual_size} bytes — this is not a valid model file. "
+            "Google Drive may have returned an HTML error page. "
+            "Make sure the file is shared as 'Anyone with the link' (Viewer)."
+        )
+
+    logger.info("Model downloaded successfully (%.1f MB)", actual_size / 1024 / 1024)
 
 
 def load_model():

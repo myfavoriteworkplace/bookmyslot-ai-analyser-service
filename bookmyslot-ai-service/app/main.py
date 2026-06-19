@@ -1,9 +1,10 @@
 import logging
 import os
 import uuid
+from contextlib import asynccontextmanager
 from pathlib import Path
 
-from fastapi import FastAPI, File, HTTPException, UploadFile
+from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.schemas import AnalyseResponse, HealthResponse
@@ -15,7 +16,25 @@ logger = logging.getLogger(__name__)
 UPLOADS_DIR = Path("uploads")
 UPLOADS_DIR.mkdir(exist_ok=True)
 
-app = FastAPI(title="BookMySlot AI Service", version="1.0.0")
+DEBUG = os.getenv("DEBUG", "false").lower() == "true"
+
+_startup_error: str | None = None
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    global _startup_error
+    try:
+        logger.info("Pre-loading YOLO model at startup...")
+        model_service.load_model()
+        logger.info("Model ready.")
+    except Exception as exc:
+        _startup_error = str(exc)
+        logger.error("STARTUP ERROR — model failed to load: %s", exc)
+    yield
+
+
+app = FastAPI(title="BookMySlot AI Service", version="1.0.0", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
@@ -27,11 +46,19 @@ app.add_middleware(
 
 @app.get("/", response_model=HealthResponse)
 def health_check():
+    if _startup_error:
+        return HealthResponse(service="BookMySlot AI", status=f"error: {_startup_error}")
     return HealthResponse(service="BookMySlot AI", status="running")
 
 
 @app.post("/analyse-xray", response_model=AnalyseResponse)
 async def analyse_xray(file: UploadFile = File(...)):
+    if _startup_error:
+        return AnalyseResponse(
+            success=False,
+            message=f"AI service unavailable: {_startup_error}",
+        )
+
     allowed_types = {"image/jpeg", "image/png", "image/webp", "image/bmp"}
     if file.content_type not in allowed_types:
         return AnalyseResponse(
@@ -52,10 +79,12 @@ async def analyse_xray(file: UploadFile = File(...)):
             findings = model_service.run_inference(str(tmp_path))
         except FileNotFoundError as exc:
             logger.error("Model not found: %s", exc)
-            return AnalyseResponse(success=False, message="AI service unavailable: model not loaded.")
+            detail = str(exc) if DEBUG else "model file not found"
+            return AnalyseResponse(success=False, message=f"AI service unavailable: {detail}")
         except Exception as exc:
             logger.exception("Inference error: %s", exc)
-            return AnalyseResponse(success=False, message="AI service unavailable.")
+            detail = str(exc) if DEBUG else "inference failed"
+            return AnalyseResponse(success=False, message=f"AI service unavailable: {detail}")
 
         return AnalyseResponse(
             success=True,
