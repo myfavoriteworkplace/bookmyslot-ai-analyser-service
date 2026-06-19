@@ -6,9 +6,10 @@ from typing import List
 logger = logging.getLogger(__name__)
 
 MODEL_PATH = os.getenv("MODEL_PATH", "models/best.pt")
-CONFIDENCE_THRESHOLD = float(os.getenv("CONFIDENCE_THRESHOLD", "0.50"))
-NMS_IOU_THRESHOLD = float(os.getenv("NMS_IOU_THRESHOLD", "0.40"))
-MAX_DETECTIONS = int(os.getenv("MAX_DETECTIONS", "50"))
+CONFIDENCE_THRESHOLD = float(os.getenv("CONFIDENCE_THRESHOLD", "0.55"))
+NMS_IOU_THRESHOLD = float(os.getenv("NMS_IOU_THRESHOLD", "0.30"))
+MAX_DETECTIONS = int(os.getenv("MAX_DETECTIONS", "30"))
+CROSS_CLASS_IOU_THRESHOLD = float(os.getenv("CROSS_CLASS_IOU_THRESHOLD", "0.50"))
 MODEL_DOWNLOAD_URL = os.getenv("MODEL_DOWNLOAD_URL", "")
 
 MIN_MODEL_SIZE_BYTES = 1 * 1024 * 1024
@@ -77,6 +78,52 @@ def load_model():
     return _model
 
 
+def _iou(box_a: dict, box_b: dict) -> float:
+    """Compute IoU between two xywh-centre boxes."""
+    ax1 = box_a["x"] - box_a["width"] / 2
+    ay1 = box_a["y"] - box_a["height"] / 2
+    ax2 = box_a["x"] + box_a["width"] / 2
+    ay2 = box_a["y"] + box_a["height"] / 2
+
+    bx1 = box_b["x"] - box_b["width"] / 2
+    by1 = box_b["y"] - box_b["height"] / 2
+    bx2 = box_b["x"] + box_b["width"] / 2
+    by2 = box_b["y"] + box_b["height"] / 2
+
+    inter_w = max(0.0, min(ax2, bx2) - max(ax1, bx1))
+    inter_h = max(0.0, min(ay2, by2) - max(ay1, by1))
+    inter = inter_w * inter_h
+
+    area_a = box_a["width"] * box_a["height"]
+    area_b = box_b["width"] * box_b["height"]
+    union = area_a + area_b - inter
+
+    return inter / union if union > 0 else 0.0
+
+
+def _cross_class_nms(findings: List[dict], iou_threshold: float) -> List[dict]:
+    """
+    Suppress overlapping boxes across different classes.
+    Findings must be sorted by confidence descending before calling.
+    For any two boxes whose IoU exceeds iou_threshold, the lower-confidence
+    one is dropped regardless of class.
+    """
+    kept = []
+    suppressed = set()
+
+    for i, candidate in enumerate(findings):
+        if i in suppressed:
+            continue
+        kept.append(candidate)
+        for j in range(i + 1, len(findings)):
+            if j in suppressed:
+                continue
+            if _iou(candidate["location"], findings[j]["location"]) > iou_threshold:
+                suppressed.add(j)
+
+    return kept
+
+
 def run_inference(image_path: str) -> List[dict]:
     model = load_model()
 
@@ -113,5 +160,8 @@ def run_inference(image_path: str) -> List[dict]:
                     },
                 }
             )
+
+    findings.sort(key=lambda f: f["confidence"], reverse=True)
+    findings = _cross_class_nms(findings, CROSS_CLASS_IOU_THRESHOLD)
 
     return findings
