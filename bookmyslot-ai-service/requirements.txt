@@ -1,10 +1,14 @@
 fastapi==0.115.5
 uvicorn[standard]==0.32.1
-ultralytics==8.3.55
-torch==2.5.1
-torchvision==0.20.1
 python-multipart==0.0.20
 pillow==11.0.0
 opencv-python-headless==4.10.0.84
 pydantic==2.10.3
 gdown==5.2.0
+
+# CPU-only PyTorch — avoids loading CUDA libraries (~1.5GB) on GPU-less servers
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.5.1+cpu
+torchvision==0.20.1+cpu
+
+ultralytics==8.3.55
