@@ -18,6 +18,8 @@ ENV MODEL_PATH=models/best.pt
 ENV CONFIDENCE_THRESHOLD=0.25
 ENV MODEL_DOWNLOAD_URL=""
 
-EXPOSE 8000
+# Port 7860 required by Hugging Face Spaces
+# For Render or other platforms, override with: --port $PORT
+EXPOSE 7860
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "7860"]
