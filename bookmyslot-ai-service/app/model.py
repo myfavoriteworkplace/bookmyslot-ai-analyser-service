@@ -124,6 +124,62 @@ def _cross_class_nms(findings: List[dict], iou_threshold: float) -> List[dict]:
     return kept
 
 
+def validate_xray_image(image_path: str) -> tuple[bool, str]:
+    """
+    Heuristic pre-screen: is this image plausibly a dental X-ray?
+
+    Returns (is_valid, error_message).
+    If the validation itself errors for any reason, returns (True, "") so
+    legitimate requests are never silently blocked.
+
+    Two checks:
+    1. Colour/saturation check — X-rays are near-monochrome; colour photos
+       have high per-pixel RGB divergence.
+    2. Contrast check — X-rays have a wide, high-variance intensity range;
+       solid-colour, near-white, or near-black images are rejected.
+    """
+    try:
+        from PIL import Image
+
+        img = Image.open(image_path).convert("RGB")
+
+        # --- 1. Grayscale / colour check ---
+        # Downsample to 64×64 for speed; enough for a statistical check.
+        small = img.resize((64, 64), Image.BILINEAR)
+        pixels = list(small.getdata())  # list of (R, G, B) tuples
+
+        mean_saturation = sum(max(r, g, b) - min(r, g, b) for r, g, b in pixels) / len(pixels)
+
+        # X-rays are near-monochrome (saturation ≈ 0–15).
+        # Colour photos typically score 40–120+.
+        if mean_saturation > 30:
+            return False, (
+                "This image appears to be a colour photograph, not an X-ray. "
+                "Please upload a genuine grayscale dental X-ray image."
+            )
+
+        # --- 2. Contrast / intensity distribution check ---
+        gray = img.convert("L").resize((128, 128), Image.BILINEAR)
+        pxs = list(gray.getdata())
+
+        intensity_range = max(pxs) - min(pxs)
+        mean_val = sum(pxs) / len(pxs)
+        std_dev = (sum((p - mean_val) ** 2 for p in pxs) / len(pxs)) ** 0.5
+
+        # Reject flat/near-blank images: solid colour, near-white, near-black.
+        if intensity_range < 60 or std_dev < 15:
+            return False, (
+                "This image has insufficient contrast to be a valid X-ray. "
+                "Please upload a genuine dental X-ray image."
+            )
+
+        return True, ""
+
+    except Exception:
+        # Never block a request due to a validation bug.
+        return True, ""
+
+
 def run_inference(image_path: str) -> List[dict]:
     model = load_model()
 

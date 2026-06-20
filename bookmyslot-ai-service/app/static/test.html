@@ -342,8 +342,12 @@
       try {
         const res = await fetch('/analyse-xray/annotated', { method: 'POST', body: form });
         if (!res.ok) {
-          const text = await res.text();
-          setStatus(`Error: ${text}`, 'error');
+          try {
+            const data = await res.json();
+            setStatus(`Error: ${data.message || 'Request failed'}`, 'error');
+          } catch (_) {
+            setStatus(`Error: ${await res.text()}`, 'error');
+          }
           return;
         }
 

@@ -7,7 +7,7 @@ from pathlib import Path
 
 from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import HTMLResponse, StreamingResponse
+from fastapi.responses import HTMLResponse, JSONResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 
 from app.schemas import AnalyseResponse, HealthResponse
@@ -147,6 +147,10 @@ async def analyse_xray(file: UploadFile = File(...)):
     tmp_path, _ = await _save_upload(file)
 
     try:
+        is_valid, reason = model_service.validate_xray_image(str(tmp_path))
+        if not is_valid:
+            return AnalyseResponse(success=False, message=reason)
+
         try:
             findings = model_service.run_inference(str(tmp_path))
         except FileNotFoundError as exc:
@@ -190,6 +194,13 @@ async def analyse_xray_annotated(file: UploadFile = File(...)):
     tmp_path, raw_bytes = await _save_upload(file)
 
     try:
+        is_valid, reason = model_service.validate_xray_image(str(tmp_path))
+        if not is_valid:
+            return JSONResponse(
+                status_code=422,
+                content={"success": False, "message": reason},
+            )
+
         try:
             findings = model_service.run_inference(str(tmp_path))
         except FileNotFoundError as exc:
