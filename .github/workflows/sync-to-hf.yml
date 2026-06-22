@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - 'bookmyslot-ai-service/**'
+      - '.github/workflows/sync-to-hf.yml'
+  workflow_dispatch:
 
 jobs:
   sync-to-hf:
