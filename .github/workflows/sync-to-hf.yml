@@ -22,11 +22,26 @@ jobs:
         run: |
           git config --global user.email "github-actions@github.com"
           git config --global user.name "GitHub Actions"
-          git subtree split --prefix bookmyslot-ai-service -b hf-deploy
+          
+          # Create a new repo with only the bookmyslot-ai-service folder at root
+          mkdir -p /tmp/hf-deploy
+          cd /tmp/hf-deploy
+          git init
+          git config user.email "github-actions@github.com"
+          git config user.name "GitHub Actions"
+          
+          # Copy the bookmyslot-ai-service folder contents
+          cp -r $GITHUB_WORKSPACE/bookmyslot-ai-service/* .
+          
+          # Add all files and commit
+          git add .
+          git commit -m "Deploy bookmyslot-ai-service to HF Space"
+          
+          # Push to Hugging Face
           git push \
+            --force \
             https://itsmyfavoriteworkplace:$HF_TOKEN@huggingface.co/spaces/itsmyfavoriteworkplace/bookmyslot-ai-service \
-            hf-deploy:main --force
-          git branch -D hf-deploy
+            HEAD:main
 
       - name: Smoke test — wait for Space to rebuild then ping health check
         run: |
@@ -38,12 +53,16 @@ jobs:
           while [ $ATTEMPT -lt $MAX_ATTEMPTS ]; do
             ATTEMPT=$((ATTEMPT + 1))
             echo "Attempt $ATTEMPT / $MAX_ATTEMPTS — pinging $URL"
-            RESPONSE=$(curl --silent --max-time 30 "$URL" || echo "CURL_FAILED")
-            if echo "$RESPONSE" | grep -q '"status":"running"'; then
+            RESPONSE=$(curl --silent --max-time 30 --write-out "\n%{http_code}" "$URL" 2>&1 || echo "CURL_FAILED")
+            HTTP_CODE=$(echo "$RESPONSE" | tail -n 1)
+            BODY=$(echo "$RESPONSE" | head -n -1)
+            
+            if [ "$HTTP_CODE" = "200" ] && echo "$BODY" | grep -q "running"; then
               echo "✅ Health check passed — service is running"
+              echo "Response: $BODY"
               exit 0
             fi
-            echo "Not ready yet. Response: $RESPONSE"
+            echo "Status: $HTTP_CODE | Response: $BODY"
             sleep 30
           done
           echo "❌ Service did not become healthy after $MAX_ATTEMPTS attempts"
